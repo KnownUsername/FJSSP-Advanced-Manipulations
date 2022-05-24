@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="job.h" />
+    <ClInclude Include="list.h" />
     <ClInclude Include="operation.h" />
     <ClInclude Include="process.h" />
     <ClInclude Include="scheduledJob.h" />
