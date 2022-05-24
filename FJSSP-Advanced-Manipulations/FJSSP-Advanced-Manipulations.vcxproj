@@ -142,11 +142,14 @@
     <ClCompile Include="job.c" />
     <ClCompile Include="operation.c" />
     <ClCompile Include="process.c" />
+    <ClCompile Include="scheduledOperations.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="job.h" />
     <ClInclude Include="operation.h" />
     <ClInclude Include="process.h" />
+    <ClInclude Include="scheduledJob.h" />
+    <ClInclude Include="scheduledOperation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

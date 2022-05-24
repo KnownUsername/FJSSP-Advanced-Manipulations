@@ -24,6 +24,9 @@
     <ClCompile Include="job.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="scheduledOperations.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="process.h">
@@ -33,6 +36,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="job.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scheduledOperation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scheduledJob.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
