@@ -18,7 +18,9 @@ typedef struct ScheduledOperation {
 /// Defines a list of scheduled Operations
 /// </summary>
 typedef struct ScheduledOperationList {
-	ScheduledOperation* operation;
+	ScheduledOperation operation;
 	ScheduledOperationList* nextOperation;
 }ScheduledOperationList;
+
+
 #endif
