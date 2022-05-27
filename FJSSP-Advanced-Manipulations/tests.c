@@ -7,28 +7,22 @@ int main() {
 
 	List* scheduledOperations = NULL;
 
-	ScheduledOperation scheduledOperation = CreateScheduledOperation(1, NULL, 0, 2);
+	ScheduledOperation scheduledOperation = CreateScheduledOperation(76, NULL, 0, 2);
 
-	scheduledOperations = InsertListItem(scheduledOperations, &scheduledOperation,CompareScheduledOperationId);
+	scheduledOperations = InsertListItem(scheduledOperations, &scheduledOperation,CompareScheduledOperations);
 
-	ScheduledOperation scheduledOperation2 = CreateScheduledOperation(2, NULL, 3, 4);
-	scheduledOperations = InsertListItem(scheduledOperations, &scheduledOperation2,CompareScheduledOperationId);
+	ScheduledOperation scheduledOperation2 = CreateScheduledOperation(35, NULL, 3, 4);
+	scheduledOperations = InsertListItem(scheduledOperations, &scheduledOperation2,CompareScheduledOperations);
 	scheduledOperations = InsertListItem(scheduledOperations, &scheduledOperation2, CompareScheduledOperations);
 
 	int number = 1;
 	
 	List* auxResult = SearchElement(scheduledOperations, number, CompareScheduledOperationId);
-	ScheduledOperation* result = (ScheduledOperation*)auxResult->data;
-	
-	
-	if (result) printf("%d\n", result->operationID);
-	else printf("NULL\n");
-
-	int i = 0;
-	while (scheduledOperations) {
-		printf("\n%d\n", ++i);
-		scheduledOperations = scheduledOperations->next;
+	if (auxResult) {
+		ScheduledOperation* result = (ScheduledOperation*)auxResult->data;
 	}
+	else printf("Bye World\n");
 
+	ShowElements(scheduledOperations, ShowScheduledOperation);
 	return 0;
 }
