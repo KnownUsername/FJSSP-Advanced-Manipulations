@@ -43,7 +43,7 @@ int ElementExists(List* list, void* data, int (*compare)(void* data1, void* data
 /// <param name="data"></param>
 /// <param name="compare"></param>
 /// <returns></returns>
-List* InsertListItem(List* list, void* newData, int (*exists)(void* data1, void* data2)) {
+List* InsertListItem(List* list, void* newData, int (*compare)(void* data1, void* data2)) {
 
 	// Empty List
 	if (!list) {
@@ -59,7 +59,7 @@ List* InsertListItem(List* list, void* newData, int (*exists)(void* data1, void*
 	else {
 
 		// Check if process is already on operation
-		if (!exists(list, newData)) {
+		if (!ElementExists(list, newData,compare)) {
 
 			List* lastElement = list;
 
