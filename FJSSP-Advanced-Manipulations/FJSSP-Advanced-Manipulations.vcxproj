@@ -140,9 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="job.c" />
+    <ClCompile Include="list.c" />
     <ClCompile Include="operation.c" />
     <ClCompile Include="process.c" />
     <ClCompile Include="scheduledOperations.c" />
+    <ClCompile Include="tests.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="job.h" />
