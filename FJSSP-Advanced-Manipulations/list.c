@@ -81,3 +81,19 @@ List* InsertListItem(List* list, void* newData, int (*compare)(void* data1, void
 
 }
 
+/// <summary>
+/// Print elements of a list
+/// </summary>
+/// <param name="list"></param>
+/// <param name="show"></param>
+void ShowElements(List* list, void (*show)(void* data)) {
+
+	while (list) {
+
+		// Show data with given function
+		show(list->data);
+
+		// Pass to next element
+		list = list->next;
+	}
+}

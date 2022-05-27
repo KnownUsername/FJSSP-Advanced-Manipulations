@@ -18,6 +18,7 @@ void* SearchElement(List* list, void* data, int (*compare)(void* data1, void* da
 // Checks if an element exists on a generic list
 int ElementExists(List* list, void* data, int (*compare)(void* data1, void* data2));
 
-
+// Print elements of a list
+void ShowElements(List* list, void (*show)(void* data));
 
 #endif
