@@ -6,7 +6,7 @@
 	Subject: Advanced Data Structures
 	About: Second Practical Work
 
-	File: scheduledOperations.c
+	File: scheduledOperation.c
 	Intent:
 		- Implement functions to manipulate 1 or more Operations scheduled 
 		  (1 Process for each Operation )

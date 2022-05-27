@@ -143,7 +143,8 @@
     <ClCompile Include="list.c" />
     <ClCompile Include="operation.c" />
     <ClCompile Include="process.c" />
-    <ClCompile Include="scheduledOperations.c" />
+    <ClCompile Include="scheduledJob.c" />
+    <ClCompile Include="scheduledOperation.c" />
     <ClCompile Include="tests.c" />
   </ItemGroup>
   <ItemGroup>

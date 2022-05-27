@@ -24,13 +24,16 @@
     <ClCompile Include="job.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="scheduledOperations.c">
+    <ClCompile Include="scheduledOperation.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="list.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tests.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scheduledJob.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
