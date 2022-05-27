@@ -57,3 +57,18 @@ int CompareScheduledOperations(void* operationData1, void* operationDate2) {
 	if (operation1->operationID == operation2->operationID) return 1;
 	else return 0;
 }
+
+/// <summary>
+/// Print values of a ScheduledOperation from a list
+/// </summary>
+/// <param name="data"></param>
+void ShowScheduledOperation(void* data) {
+
+	// Data type cast
+	ScheduledOperation* operation = (ScheduledOperation*)data;
+
+	printf("Id: %d\n", operation->operationID);
+	if(operation->process) ShowProcess(*operation->process);
+	printf("Start time: %d\n", operation->startTime);
+	printf("End time: %d\n\n", operation->endTime);
+}

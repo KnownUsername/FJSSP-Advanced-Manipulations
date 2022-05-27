@@ -24,4 +24,7 @@ int CompareScheduledOperationId(void* operationData, void* id);
 
 // Compares two ScheduledOperations, based on both ids
 int CompareScheduledOperations(void* operationData1, void* operationDate2);
+
+// Print values of a ScheduledOperation from a list
+void ShowScheduledOperation(void* data);
 #endif
