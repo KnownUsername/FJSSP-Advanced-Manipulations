@@ -30,55 +30,14 @@ ScheduledOperation CreateScheduledOperation(int operationID, Process* process, i
 /// <param name="operationData"></param>
 /// <param name="id"></param>
 /// <returns></returns>
-int CompareScheduledOperationId(void* operationData, void* id) {
+int CompareScheduledOperationId(void* operationData, void* ptrId) {
 
 	// Data casts to desired type
 	ScheduledOperation* operation = (ScheduledOperation*)operationData;
-	int id = (int)&id;
+	//int ptrid = (int*) ptrId;
+	int id = (int)ptrId;
 
 	// Data comparisons
 	if (operation->operationID == id) return 1;
 	else return 0;
-}
-
-
-/// <summary>
-/// Searches for a ScheduledOperation with given identifier
-/// </summary>
-/// <param name="operations"></param>
-/// <param name="id"></param>
-/// <returns></returns>
-ScheduledOperation* SearchScheduledOperation(List* operations, void* id) {
-
-	// Search on all elements
-	while (operations) {
-
-		// Compare ids for a match
-		if (CompareScheduledOperationId(operations->data, id)) {
-			
-			// Return found operation
-			return (ScheduledOperation*) operations;
-		}
-		// Pass to next element
-		operations = operations->next;
-	}
-
-	// No match found
-	return NULL;
-}
-
-
-
-/// <summary>
-/// Verify if a ScheduledOperation exists on a list
-/// </summary>
-/// <param name="list"></param>
-/// <param name="data"></param>
-/// <returns> 1 -> True | 0 -> False </returns>
-int ScheduledOperationExists(List* list, void* data) {
-
-	// Search for ScheduledOperation -> If found, it exists
-	if (SearchScheduledOperation(list, data)) return 1;
-
-	return 0; // False
 }
