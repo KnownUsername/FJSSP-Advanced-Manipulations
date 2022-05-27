@@ -1,3 +1,17 @@
+/*
+	Student: João Rodrigues
+	Student Number: 16928
+	Lective year: 2021/2022
+
+	Subject: Advanced Data Structures
+	About: Second Practical Work
+
+	File: scheduledOperations.c
+	Intent:
+		- Implement functions to manipulate 1 or more Operations scheduled 
+		  (1 Process for each Operation )
+*/
+
 #include "list.h"
 #include "scheduledOperation.h"
 #include <stdio.h>
