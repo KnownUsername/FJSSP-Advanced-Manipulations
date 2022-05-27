@@ -1,3 +1,16 @@
+/*
+	Student: João Rodrigues
+	Student Number: 16928
+	Lective year: 2021/2022
+
+	Subject: Advanced Data Structures
+	About: Second Practical Work
+
+	File: tests.c
+	Intent:
+		- Test functions as they are implemented
+*/
+
 #include "list.h"
 #include "scheduledOperation.h"
 #include <stdio.h>
