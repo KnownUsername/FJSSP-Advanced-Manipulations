@@ -67,7 +67,12 @@ void ShowScheduledOperation(void* data) {
 	// Data type cast
 	ScheduledOperation* operation = (ScheduledOperation*)data;
 
+	// Empty data is discarded
+	if (operation) return;
+
 	printf("Id: %d\n", operation->operationID);
+
+	// Print Process if exists
 	if(operation->process) ShowProcess(*operation->process);
 	printf("Start time: %d\n", operation->startTime);
 	printf("End time: %d\n\n", operation->endTime);
