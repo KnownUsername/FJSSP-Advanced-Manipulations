@@ -37,13 +37,19 @@ int main() {
 	}
 	else printf("Bye World\n");
 
-	ShowElements(scheduledOperations, ShowScheduledOperation);
+	//ShowElements(scheduledOperations, ShowScheduledOperation);
 	printf("\n\n Ora viva!\n\n");
 	scheduledOperations = RemoveElement(scheduledOperations, 35,CompareScheduledOperationId, DeleteScheduledOperation);
 
-	ShowElements(scheduledOperations, ShowScheduledOperation);
+	//ShowElements(scheduledOperations, ShowScheduledOperation);
 
-	ScheduledJob scheduledJob = CreateScheduledJob("pr 1.1", NULL, 6);
+	ScheduledJob scheduledJob = CreateScheduledJob("pr 1.1", scheduledOperations, 6);
+
+	List* jobs = NULL;
+
+	jobs = InsertListItem(jobs, &scheduledJob, CompareScheduledJobId);
+
+	ShowElements(jobs, ShowScheduledJob);
 
 	return 0;
 }
