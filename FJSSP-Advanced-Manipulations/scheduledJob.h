@@ -24,4 +24,7 @@ void ShowScheduledJob(void* data);
 // Compares a ScheduledJob's id with a given id, 
 // provided from a generic list
 int CompareScheduledJobId(void* jobData, void* ptrId);
+
+// Free memory from a ScheduledJob structure from a list
+void* DeleteScheduledJob(void* data);
 #endif

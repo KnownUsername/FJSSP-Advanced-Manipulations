@@ -69,3 +69,20 @@ int CompareScheduledJobId(void* jobData, void* ptrId) {
 	if (!strcmp(job->jobIdentifier, id)) return 1;
 	else return 0;
 }
+
+/// <summary>
+/// Free memory from a ScheduledJob structure from a list
+/// </summary>
+/// <param name="data"></param>
+/// <returns></returns>
+void* DeleteScheduledJob(void* data) {
+
+	// Data type cast
+	ScheduledJob* job = (ScheduledJob*)data;
+
+	// Free memory from process
+	job->operations = DeleteList(job->operations, DeleteScheduledOperation);
+
+	// Return file without memory allocated from mallocs
+	return NULL;
+}
