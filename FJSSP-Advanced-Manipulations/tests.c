@@ -39,7 +39,7 @@ int main() {
 
 	//ShowElements(scheduledOperations, ShowScheduledOperation);
 	printf("\n\n Ora viva!\n\n");
-	scheduledOperations = RemoveElement(scheduledOperations, 35,CompareScheduledOperationId, DeleteScheduledOperation);
+	//scheduledOperations = RemoveElement(scheduledOperations, 35,CompareScheduledOperationId, DeleteScheduledOperation);
 
 	//ShowElements(scheduledOperations, ShowScheduledOperation);
 
@@ -51,5 +51,20 @@ int main() {
 
 	ShowElements(jobs, ShowScheduledJob);
 
+	/*scheduledOperations = DeleteList(scheduledOperations, DeleteScheduledOperation);
+
+	puts("\n\n");
+	
+	if (!scheduledOperations) printf("Empty List\n");
+	else printf("Unintended behavior\n");*/
+
+
+	jobs = DeleteList(jobs, DeleteScheduledJob);
+
+	puts("\n\n");
+
+
+	if(!jobs) printf("Empty List\n");
+	else printf("Unintended behavior\n");
 	return 0;
 }
