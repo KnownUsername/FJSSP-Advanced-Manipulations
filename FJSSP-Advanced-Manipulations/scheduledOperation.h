@@ -27,4 +27,7 @@ int CompareScheduledOperations(void* operationData1, void* operationDate2);
 
 // Print values of a ScheduledOperation from a list
 void ShowScheduledOperation(void* data);
+
+// Free memory from a ScheduledOperation structure from a list
+void* DeleteScheduledOperation(void* data);
 #endif

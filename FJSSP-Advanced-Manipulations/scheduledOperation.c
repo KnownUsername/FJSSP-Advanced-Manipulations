@@ -82,7 +82,7 @@ void ShowScheduledOperation(void* data) {
 	ScheduledOperation* operation = (ScheduledOperation*)data;
 
 	// Empty data is discarded
-	if (operation) return;
+	if (!operation) return;
 
 	printf("Id: %d\n", operation->operationID);
 
@@ -90,4 +90,21 @@ void ShowScheduledOperation(void* data) {
 	if(operation->process) ShowProcess(*operation->process);
 	printf("Start time: %d\n", operation->startTime);
 	printf("End time: %d\n\n", operation->endTime);
+}
+
+/// <summary>
+/// Free memory from a ScheduledOperation structure from a list
+/// </summary>
+/// <param name="data"></param>
+/// <returns></returns>
+void* DeleteScheduledOperation(void* data) {
+
+	// Data type cast
+	ScheduledOperation* operation = (ScheduledOperation*)data;
+
+	// Free memory from process
+	free(operation->process);
+
+	// Return file without memory allocated from mallocs
+	return operation;
 }
