@@ -15,6 +15,7 @@
 #include "list.h"
 #include "scheduledOperation.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /// <summary>
 /// Creates a ScheduledOperation with given arguments
@@ -89,7 +90,7 @@ void ShowScheduledOperation(void* data) {
 	// Print Process if exists
 	if(operation->process) ShowProcess(*operation->process);
 	printf("Start time: %d\n", operation->startTime);
-	printf("End time: %d\n\n", operation->endTime);
+	printf("End time: %d\n", operation->endTime);
 }
 
 /// <summary>
