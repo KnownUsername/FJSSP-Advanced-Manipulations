@@ -13,7 +13,7 @@ typedef struct List {
 List* InsertListItem(List* list, void* newData, int (*exists)(void* data1, void* data2));
 
 // Search for an element on the list
-void* SearchElement(List* list, void* data, int (*compare)(void* data1, void* data2));
+List* SearchElement(List* list, void* data, int (*compare)(void* data1, void* data2));
 
 // Checks if an element exists on a generic list
 int ElementExists(List* list, void* data, int (*compare)(void* data1, void* data2));
@@ -21,4 +21,6 @@ int ElementExists(List* list, void* data, int (*compare)(void* data1, void* data
 // Print elements of a list
 void ShowElements(List* list, void (*show)(void* data));
 
+// Removes an element from a list
+List* RemoveElement(List* list, void* data, int (*compare)(void* data1, void* data2), void* (*delete)(void* data));
 #endif

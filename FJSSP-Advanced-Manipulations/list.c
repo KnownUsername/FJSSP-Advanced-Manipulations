@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 // Search for an element on the list
-void* SearchElement(List* list, void* data, int (*compare)(void* data1, void* data2)) {
+List* SearchElement(List* list, void* data, int (*compare)(void* data1, void* data2)) {
 	
 	// Compare all values on list with new element
 	while (list) {
@@ -18,6 +18,32 @@ void* SearchElement(List* list, void* data, int (*compare)(void* data1, void* da
 	return NULL;
 }
 
+/// <summary>
+/// Search the element before a given one
+/// </summary>
+/// <param name="list"></param>
+/// <param name="data"></param>
+/// <param name="compare"></param>
+/// <returns></returns>
+List* SearchElementBefore(List* list, void* data, int (*compare)(void* data1, void* data2)) {
+
+	// Empty list or element on 1st positions,
+	// means there is no element before the desired one
+	if(!list || (compare(list->data, data)) ) return NULL;
+
+	// Walk through list
+	while (list->next) {
+		
+		// Found the element before the desired one
+		if (compare(list->next->data, data)) return list;
+	
+		// Go to next value
+		list = list->next;
+	}
+
+	// Element not found
+	return NULL;
+}
 
 
 /// <summary>
@@ -97,3 +123,72 @@ void ShowElements(List* list, void (*show)(void* data)) {
 		list = list->next;
 	}
 }
+
+List* DeleteElement(List* elementToRemove, void* (*delete)(void* data)) {
+
+	// Disconnect element from the list
+	elementToRemove->next = NULL;
+
+	// Free memory from data
+	elementToRemove->data = delete(elementToRemove->data);
+
+	// Free memory from element being removed
+	free(elementToRemove);
+
+	// Retrieve element with new state => empty
+	return elementToRemove;
+
+}
+
+/// <summary>
+/// Removes an element from a list
+/// </summary>
+/// <param name="list"></param>
+/// <param name="data"></param>
+/// <param name="compare"></param>
+/// <param name="data"></param>
+/// <returns></returns>
+List* RemoveElement(List* list, void* data, int (*compare)(void* data1, void* data2), void* (*delete)(void* data)) {
+
+	// Empty list has no element to remove
+	if (!list) return NULL;
+
+	List* elementToRemove;
+
+	// Element on 1st position
+	if (compare(list->data, data)) {
+
+		elementToRemove = list;
+		
+		// Assign 1st position to next element
+		list = list->next;
+
+		// Delete data from element and free memory
+		elementToRemove = DeleteElement(elementToRemove, delete);
+
+	}
+
+	// Element on 2nd to last position
+	else {
+
+		// Search for element before desired one
+		List* elementBefore = SearchElementBefore(list, data, compare);
+
+		// Element not found, then no element to remove
+		if (!elementBefore) return list;
+
+		// Pointer to element to remove
+		elementToRemove = elementBefore->next;
+
+		// Connect the element before with the element after the one to remove
+		elementBefore->next = elementToRemove->next;
+
+		// Delete data from element and free memory
+		elementToRemove = DeleteElement(elementToRemove, delete);
+
+	}
+	
+	// New state of list
+	return list;
+}
+
