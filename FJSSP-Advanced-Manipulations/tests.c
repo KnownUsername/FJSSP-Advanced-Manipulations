@@ -37,5 +37,10 @@ int main() {
 	else printf("Bye World\n");
 
 	ShowElements(scheduledOperations, ShowScheduledOperation);
+	printf("\n\n Ora viva!\n\n");
+	scheduledOperations = RemoveElement(scheduledOperations, 35,CompareScheduledOperationId, DeleteScheduledOperation);
+
+	ShowElements(scheduledOperations, ShowScheduledOperation);
+
 	return 0;
 }
