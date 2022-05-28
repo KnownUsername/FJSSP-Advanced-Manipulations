@@ -1,0 +1,159 @@
+\hypertarget{scheduled_operation_8h}{}\doxysection{F\+J\+S\+S\+P-\/\+Advanced-\/\+Manipulations/scheduled\+Operation.h File Reference}
+\label{scheduled_operation_8h}\index{FJSSP-\/Advanced-\/Manipulations/scheduledOperation.h@{FJSSP-\/Advanced-\/Manipulations/scheduledOperation.h}}
+{\ttfamily \#include \char`\"{}process.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}}
+\begin{DoxyCompactList}\small\item\em Defines an \mbox{\hyperlink{struct_operation}{Operation}} scheduled Has the \mbox{\hyperlink{struct_process}{Process}} used and time it starts and ends \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} \mbox{\hyperlink{scheduled_operation_8h_aedd58fa8b6caa535edb0adce0a6a9338}{Scheduled\+Operation}}
+\begin{DoxyCompactList}\small\item\em Defines an \mbox{\hyperlink{struct_operation}{Operation}} scheduled Has the \mbox{\hyperlink{struct_process}{Process}} used and time it starts and ends \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} \mbox{\hyperlink{scheduled_operation_8h_a18e49ed66362a10344fd05d7a39a3362}{Create\+Scheduled\+Operation}} (int operation\+ID, \mbox{\hyperlink{struct_process}{Process}} $\ast$process, int start\+Time, int end\+Time)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} with given arguments \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{scheduled_operation_8h_a5562b2b796b779a03b10dfc7a09a8345}{Compare\+Scheduled\+Operation\+Id}} (void $\ast$operation\+Data, void $\ast$id)
+\begin{DoxyCompactList}\small\item\em Compares a \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}}\textquotesingle{}s id with a given id, provided from a generic list \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{scheduled_operation_8h_aed1c79447c3b82696c29d881c82c4522}{Compare\+Scheduled\+Operations}} (void $\ast$operation\+Data1, void $\ast$operation\+Date2)
+\begin{DoxyCompactList}\small\item\em Compares two Scheduled\+Operations, based on both ids \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{scheduled_operation_8h_aced06d99d6411fcf930c8c2cd5e212f9}{Show\+Scheduled\+Operation}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Print values of a \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} from a list \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{scheduled_operation_8h_a539daf27afc7e59505139b9cc6a66b71}{Delete\+Scheduled\+Operation}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Free memory from a \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} structure from a list \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{scheduled_operation_8h_aedd58fa8b6caa535edb0adce0a6a9338}\label{scheduled_operation_8h_aedd58fa8b6caa535edb0adce0a6a9338}} 
+\index{scheduledOperation.h@{scheduledOperation.h}!ScheduledOperation@{ScheduledOperation}}
+\index{ScheduledOperation@{ScheduledOperation}!scheduledOperation.h@{scheduledOperation.h}}
+\doxysubsubsection{\texorpdfstring{ScheduledOperation}{ScheduledOperation}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}}}
+
+
+
+Defines an \mbox{\hyperlink{struct_operation}{Operation}} scheduled Has the \mbox{\hyperlink{struct_process}{Process}} used and time it starts and ends 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{scheduled_operation_8h_a5562b2b796b779a03b10dfc7a09a8345}\label{scheduled_operation_8h_a5562b2b796b779a03b10dfc7a09a8345}} 
+\index{scheduledOperation.h@{scheduledOperation.h}!CompareScheduledOperationId@{CompareScheduledOperationId}}
+\index{CompareScheduledOperationId@{CompareScheduledOperationId}!scheduledOperation.h@{scheduledOperation.h}}
+\doxysubsubsection{\texorpdfstring{CompareScheduledOperationId()}{CompareScheduledOperationId()}}
+{\footnotesize\ttfamily int Compare\+Scheduled\+Operation\+Id (\begin{DoxyParamCaption}\item[{void $\ast$}]{operation\+Data,  }\item[{void $\ast$}]{ptr\+Id }\end{DoxyParamCaption})}
+
+
+
+Compares a \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}}\textquotesingle{}s id with a given id, provided from a generic list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+Data} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 48 of file scheduled\+Operation.\+c.
+
+\mbox{\Hypertarget{scheduled_operation_8h_aed1c79447c3b82696c29d881c82c4522}\label{scheduled_operation_8h_aed1c79447c3b82696c29d881c82c4522}} 
+\index{scheduledOperation.h@{scheduledOperation.h}!CompareScheduledOperations@{CompareScheduledOperations}}
+\index{CompareScheduledOperations@{CompareScheduledOperations}!scheduledOperation.h@{scheduledOperation.h}}
+\doxysubsubsection{\texorpdfstring{CompareScheduledOperations()}{CompareScheduledOperations()}}
+{\footnotesize\ttfamily int Compare\+Scheduled\+Operations (\begin{DoxyParamCaption}\item[{void $\ast$}]{operation\+Data1,  }\item[{void $\ast$}]{operation\+Date2 }\end{DoxyParamCaption})}
+
+
+
+Compares two Scheduled\+Operations, based on both ids 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+Data1} & \\
+\hline
+{\em operation\+Date2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 65 of file scheduled\+Operation.\+c.
+
+\mbox{\Hypertarget{scheduled_operation_8h_a18e49ed66362a10344fd05d7a39a3362}\label{scheduled_operation_8h_a18e49ed66362a10344fd05d7a39a3362}} 
+\index{scheduledOperation.h@{scheduledOperation.h}!CreateScheduledOperation@{CreateScheduledOperation}}
+\index{CreateScheduledOperation@{CreateScheduledOperation}!scheduledOperation.h@{scheduledOperation.h}}
+\doxysubsubsection{\texorpdfstring{CreateScheduledOperation()}{CreateScheduledOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} Create\+Scheduled\+Operation (\begin{DoxyParamCaption}\item[{int}]{operation\+ID,  }\item[{\mbox{\hyperlink{struct_process}{Process}} $\ast$}]{process,  }\item[{int}]{start\+Time,  }\item[{int}]{end\+Time }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} with given arguments 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+ID} & \\
+\hline
+{\em process} & \\
+\hline
+{\em start\+Time} & \\
+\hline
+{\em end\+Time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 28 of file scheduled\+Operation.\+c.
+
+\mbox{\Hypertarget{scheduled_operation_8h_a539daf27afc7e59505139b9cc6a66b71}\label{scheduled_operation_8h_a539daf27afc7e59505139b9cc6a66b71}} 
+\index{scheduledOperation.h@{scheduledOperation.h}!DeleteScheduledOperation@{DeleteScheduledOperation}}
+\index{DeleteScheduledOperation@{DeleteScheduledOperation}!scheduledOperation.h@{scheduledOperation.h}}
+\doxysubsubsection{\texorpdfstring{DeleteScheduledOperation()}{DeleteScheduledOperation()}}
+{\footnotesize\ttfamily void$\ast$ Delete\+Scheduled\+Operation (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Free memory from a \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} structure from a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 101 of file scheduled\+Operation.\+c.
+
+\mbox{\Hypertarget{scheduled_operation_8h_aced06d99d6411fcf930c8c2cd5e212f9}\label{scheduled_operation_8h_aced06d99d6411fcf930c8c2cd5e212f9}} 
+\index{scheduledOperation.h@{scheduledOperation.h}!ShowScheduledOperation@{ShowScheduledOperation}}
+\index{ShowScheduledOperation@{ShowScheduledOperation}!scheduledOperation.h@{scheduledOperation.h}}
+\doxysubsubsection{\texorpdfstring{ShowScheduledOperation()}{ShowScheduledOperation()}}
+{\footnotesize\ttfamily void Show\+Scheduled\+Operation (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Print values of a \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} from a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 80 of file scheduled\+Operation.\+c.
+

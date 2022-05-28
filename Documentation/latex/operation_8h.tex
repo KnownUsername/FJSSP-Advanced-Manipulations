@@ -1,0 +1,264 @@
+\hypertarget{operation_8h}{}\doxysection{F\+J\+S\+S\+P-\/\+Advanced-\/\+Manipulations/operation.h File Reference}
+\label{operation_8h}\index{FJSSP-\/Advanced-\/Manipulations/operation.h@{FJSSP-\/Advanced-\/Manipulations/operation.h}}
+{\ttfamily \#include \char`\"{}process.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_operation}{Operation}}
+\begin{DoxyCompactList}\small\item\em Defines 1 \mbox{\hyperlink{struct_operation}{Operation}} \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_operation_list}{Operation\+List}}
+\begin{DoxyCompactList}\small\item\em Defines a list of Operations \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_operation}{Operation}} \mbox{\hyperlink{operation_8h_a482954e58a1aa24c2a67b81bb6d92d9c}{Operation}}
+\begin{DoxyCompactList}\small\item\em Defines 1 \mbox{\hyperlink{struct_operation}{Operation}} \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_operation_list}{Operation\+List}} \mbox{\hyperlink{operation_8h_afd2693dc6ca3a12ddd7da0af63db2ebc}{Operation\+List}}
+\begin{DoxyCompactList}\small\item\em Defines a list of Operations \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$ \mbox{\hyperlink{operation_8h_aacdbe31476969c0cfc789e16796deddf}{Insert\+Operation}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$operation\+List, \mbox{\hyperlink{struct_operation}{Operation}} new\+Operation)
+\begin{DoxyCompactList}\small\item\em Inserts a \mbox{\hyperlink{struct_operation}{Operation}} on a list of Operations \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operation}{Operation}} \mbox{\hyperlink{operation_8h_af9b24abfebf95e9a84cd80cbcf1e876f}{Create\+Operation}} (int op\+Identifier, \mbox{\hyperlink{struct_process_list}{Process\+List}} $\ast$process\+List)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{struct_operation}{Operation}} with given values \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$ \mbox{\hyperlink{operation_8h_abadabea5e9276d0cb51ca391a0cf11b4}{Remove\+Operation}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$operation\+List, int op\+Identifier)
+\begin{DoxyCompactList}\small\item\em Removes an operation from a list, given its identifier \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{operation_8h_a17671e02c4b0691055c980a8c44c784a}{Change\+Operation\+Id\+On\+List}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$operation\+List, int older\+Id, int new\+Id)
+\begin{DoxyCompactList}\small\item\em Changes the id of an \mbox{\hyperlink{struct_operation}{Operation}}, on a list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{operation_8h_ae8d40df45204259b916dd2b5ca536e97}{Show\+Operation}} (\mbox{\hyperlink{struct_operation}{Operation}} operation)
+\begin{DoxyCompactList}\small\item\em Prints values of an \mbox{\hyperlink{struct_operation}{Operation}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{operation_8h_acd0fcf1bbdbf64b06df0de37a37775a2}{Show\+Operation\+List}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$operation\+List)
+\begin{DoxyCompactList}\small\item\em Prints values of operations on a list \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$ \mbox{\hyperlink{operation_8h_a32769da4e29a6b1be25e75404f307823}{Search\+Operation}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$operation\+List, int op\+Identifier)
+\begin{DoxyCompactList}\small\item\em Searches an \mbox{\hyperlink{struct_operation}{Operation}} based on the id \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{operation_8h_aa4d242826bfd6bb5e54e661d4e59d9c6}{Operation\+Exists}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$operation\+List, int op\+Identifier)
+\begin{DoxyCompactList}\small\item\em Verify if \mbox{\hyperlink{struct_operation}{Operation}} exists on a list \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{operation_8h_ac5bef494ac8ba40c76e35a9a744495f9}{Calculate\+Average\+Operation\+Process\+Time}} (\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$operation\+List)
+\begin{DoxyCompactList}\small\item\em Calculates average time of Operations, to complete a \mbox{\hyperlink{struct_process}{Process}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{operation_8h_a482954e58a1aa24c2a67b81bb6d92d9c}\label{operation_8h_a482954e58a1aa24c2a67b81bb6d92d9c}} 
+\index{operation.h@{operation.h}!Operation@{Operation}}
+\index{Operation@{Operation}!operation.h@{operation.h}}
+\doxysubsubsection{\texorpdfstring{Operation}{Operation}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_operation}{Operation}} \mbox{\hyperlink{struct_operation}{Operation}}}
+
+
+
+Defines 1 \mbox{\hyperlink{struct_operation}{Operation}} 
+
+\mbox{\Hypertarget{operation_8h_afd2693dc6ca3a12ddd7da0af63db2ebc}\label{operation_8h_afd2693dc6ca3a12ddd7da0af63db2ebc}} 
+\index{operation.h@{operation.h}!OperationList@{OperationList}}
+\index{OperationList@{OperationList}!operation.h@{operation.h}}
+\doxysubsubsection{\texorpdfstring{OperationList}{OperationList}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_operation_list}{Operation\+List}} \mbox{\hyperlink{struct_operation_list}{Operation\+List}}}
+
+
+
+Defines a list of Operations 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{operation_8h_ac5bef494ac8ba40c76e35a9a744495f9}\label{operation_8h_ac5bef494ac8ba40c76e35a9a744495f9}} 
+\index{operation.h@{operation.h}!CalculateAverageOperationProcessTime@{CalculateAverageOperationProcessTime}}
+\index{CalculateAverageOperationProcessTime@{CalculateAverageOperationProcessTime}!operation.h@{operation.h}}
+\doxysubsubsection{\texorpdfstring{CalculateAverageOperationProcessTime()}{CalculateAverageOperationProcessTime()}}
+{\footnotesize\ttfamily float Calculate\+Average\+Operation\+Process\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operation\+List }\end{DoxyParamCaption})}
+
+
+
+Calculates average time of Operations, to complete a \mbox{\hyperlink{struct_process}{Process}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+List} & \\
+\hline
+\end{DoxyParams}
+$<$return$>$ -\/1 if N\+U\+LL list or average of list $<$/return$>$ 
+
+Definition at line 237 of file operation.\+c.
+
+\mbox{\Hypertarget{operation_8h_a17671e02c4b0691055c980a8c44c784a}\label{operation_8h_a17671e02c4b0691055c980a8c44c784a}} 
+\index{operation.h@{operation.h}!ChangeOperationIdOnList@{ChangeOperationIdOnList}}
+\index{ChangeOperationIdOnList@{ChangeOperationIdOnList}!operation.h@{operation.h}}
+\doxysubsubsection{\texorpdfstring{ChangeOperationIdOnList()}{ChangeOperationIdOnList()}}
+{\footnotesize\ttfamily int Change\+Operation\+Id\+On\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operation\+List,  }\item[{int}]{older\+Id,  }\item[{int}]{new\+Id }\end{DoxyParamCaption})}
+
+
+
+Changes the id of an \mbox{\hyperlink{struct_operation}{Operation}}, on a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+List} & \\
+\hline
+{\em older\+Id} & \\
+\hline
+{\em new\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 216 of file operation.\+c.
+
+\mbox{\Hypertarget{operation_8h_af9b24abfebf95e9a84cd80cbcf1e876f}\label{operation_8h_af9b24abfebf95e9a84cd80cbcf1e876f}} 
+\index{operation.h@{operation.h}!CreateOperation@{CreateOperation}}
+\index{CreateOperation@{CreateOperation}!operation.h@{operation.h}}
+\doxysubsubsection{\texorpdfstring{CreateOperation()}{CreateOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation}{Operation}} Create\+Operation (\begin{DoxyParamCaption}\item[{int}]{op\+Identifier,  }\item[{\mbox{\hyperlink{struct_process_list}{Process\+List}} $\ast$}]{process\+List }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{struct_operation}{Operation}} with given values 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+Identifier} & \\
+\hline
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 23 of file operation.\+c.
+
+\mbox{\Hypertarget{operation_8h_aacdbe31476969c0cfc789e16796deddf}\label{operation_8h_aacdbe31476969c0cfc789e16796deddf}} 
+\index{operation.h@{operation.h}!InsertOperation@{InsertOperation}}
+\index{InsertOperation@{InsertOperation}!operation.h@{operation.h}}
+\doxysubsubsection{\texorpdfstring{InsertOperation()}{InsertOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation_list}{Operation\+List}}$\ast$ Insert\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operation\+List,  }\item[{\mbox{\hyperlink{struct_operation}{Operation}}}]{new\+Operation }\end{DoxyParamCaption})}
+
+
+
+Inserts a \mbox{\hyperlink{struct_operation}{Operation}} on a list of Operations 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_operation_list}{Operation\+List}}} & \\
+\hline
+{\em op\+Identifier} & \\
+\hline
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 93 of file operation.\+c.
+
+\mbox{\Hypertarget{operation_8h_aa4d242826bfd6bb5e54e661d4e59d9c6}\label{operation_8h_aa4d242826bfd6bb5e54e661d4e59d9c6}} 
+\index{operation.h@{operation.h}!OperationExists@{OperationExists}}
+\index{OperationExists@{OperationExists}!operation.h@{operation.h}}
+\doxysubsubsection{\texorpdfstring{OperationExists()}{OperationExists()}}
+{\footnotesize\ttfamily int Operation\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operation\+List,  }\item[{int}]{op\+Identifier }\end{DoxyParamCaption})}
+
+
+
+Verify if \mbox{\hyperlink{struct_operation}{Operation}} exists on a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_operation_list}{Operation\+List}}} & \\
+\hline
+{\em op\+Identifier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 -\/$>$ True $\vert$ 0 -\/$>$ False 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file operation.\+c.
+
+\mbox{\Hypertarget{operation_8h_abadabea5e9276d0cb51ca391a0cf11b4}\label{operation_8h_abadabea5e9276d0cb51ca391a0cf11b4}} 
+\index{operation.h@{operation.h}!RemoveOperation@{RemoveOperation}}
+\index{RemoveOperation@{RemoveOperation}!operation.h@{operation.h}}
+\doxysubsubsection{\texorpdfstring{RemoveOperation()}{RemoveOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation_list}{Operation\+List}}$\ast$ Remove\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operation\+List,  }\item[{int}]{op\+Identifier }\end{DoxyParamCaption})}
+
+
+
+Removes an operation from a list, given its identifier 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+List} & \\
+\hline
+{\em op\+Identifier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 161 of file operation.\+c.
+
+\mbox{\Hypertarget{operation_8h_a32769da4e29a6b1be25e75404f307823}\label{operation_8h_a32769da4e29a6b1be25e75404f307823}} 
+\index{operation.h@{operation.h}!SearchOperation@{SearchOperation}}
+\index{SearchOperation@{SearchOperation}!operation.h@{operation.h}}
+\doxysubsubsection{\texorpdfstring{SearchOperation()}{SearchOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation_list}{Operation\+List}}$\ast$ Search\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operation\+List,  }\item[{int}]{op\+Identifier }\end{DoxyParamCaption})}
+
+
+
+Searches an \mbox{\hyperlink{struct_operation}{Operation}} based on the id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+List} & \\
+\hline
+{\em op\+Identifier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_operation}{Operation}} pointer if found or N\+U\+LL if not found 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file operation.\+c.
+
+\mbox{\Hypertarget{operation_8h_ae8d40df45204259b916dd2b5ca536e97}\label{operation_8h_ae8d40df45204259b916dd2b5ca536e97}} 
+\index{operation.h@{operation.h}!ShowOperation@{ShowOperation}}
+\index{ShowOperation@{ShowOperation}!operation.h@{operation.h}}
+\doxysubsubsection{\texorpdfstring{ShowOperation()}{ShowOperation()}}
+{\footnotesize\ttfamily void Show\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation}{Operation}}}]{operation }\end{DoxyParamCaption})}
+
+
+
+Prints values of an \mbox{\hyperlink{struct_operation}{Operation}} 
+
+
+
+Definition at line 138 of file operation.\+c.
+
+\mbox{\Hypertarget{operation_8h_acd0fcf1bbdbf64b06df0de37a37775a2}\label{operation_8h_acd0fcf1bbdbf64b06df0de37a37775a2}} 
+\index{operation.h@{operation.h}!ShowOperationList@{ShowOperationList}}
+\index{ShowOperationList@{ShowOperationList}!operation.h@{operation.h}}
+\doxysubsubsection{\texorpdfstring{ShowOperationList()}{ShowOperationList()}}
+{\footnotesize\ttfamily void Show\+Operation\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operation\+List }\end{DoxyParamCaption})}
+
+
+
+Prints values of operations on a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+List} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 147 of file operation.\+c.
+

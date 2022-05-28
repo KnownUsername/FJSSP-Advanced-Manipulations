@@ -1,0 +1,132 @@
+\hypertarget{scheduled_job_8h}{}\doxysection{F\+J\+S\+S\+P-\/\+Advanced-\/\+Manipulations/scheduled\+Job.h File Reference}
+\label{scheduled_job_8h}\index{FJSSP-\/Advanced-\/Manipulations/scheduledJob.h@{FJSSP-\/Advanced-\/Manipulations/scheduledJob.h}}
+{\ttfamily \#include \char`\"{}scheduled\+Operation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}list.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}}
+\begin{DoxyCompactList}\small\item\em Defines a job with its operations scheduled \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}} \mbox{\hyperlink{scheduled_job_8h_adbd687307baa3a6847d66dbe22043643}{Scheduled\+Job}}
+\begin{DoxyCompactList}\small\item\em Defines a job with its operations scheduled \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}} \mbox{\hyperlink{scheduled_job_8h_a6f000a0926fbfa02457736de03b200ab}{Create\+Scheduled\+Job}} (char $\ast$job\+Identifier, \mbox{\hyperlink{struct_list}{List}} $\ast$operations, int duration)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}} with given arguments \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{scheduled_job_8h_a6e93f827bfecec0c83a9c5d20d529729}{Show\+Scheduled\+Job}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Print values of a \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} from a list \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{scheduled_job_8h_a85d4ebcc508994be34a1dc11033f2686}{Compare\+Scheduled\+Job\+Id}} (void $\ast$job\+Data, void $\ast$ptr\+Id)
+\begin{DoxyCompactList}\small\item\em Compares a \mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}}\textquotesingle{}s id with a given id, provided from a generic list \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{scheduled_job_8h_ab40ce88c087657354f45ce962168e644}{Delete\+Scheduled\+Job}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Free memory from a \mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}} structure from a list \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{scheduled_job_8h_adbd687307baa3a6847d66dbe22043643}\label{scheduled_job_8h_adbd687307baa3a6847d66dbe22043643}} 
+\index{scheduledJob.h@{scheduledJob.h}!ScheduledJob@{ScheduledJob}}
+\index{ScheduledJob@{ScheduledJob}!scheduledJob.h@{scheduledJob.h}}
+\doxysubsubsection{\texorpdfstring{ScheduledJob}{ScheduledJob}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}} \mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}}}
+
+
+
+Defines a job with its operations scheduled 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{scheduled_job_8h_a85d4ebcc508994be34a1dc11033f2686}\label{scheduled_job_8h_a85d4ebcc508994be34a1dc11033f2686}} 
+\index{scheduledJob.h@{scheduledJob.h}!CompareScheduledJobId@{CompareScheduledJobId}}
+\index{CompareScheduledJobId@{CompareScheduledJobId}!scheduledJob.h@{scheduledJob.h}}
+\doxysubsubsection{\texorpdfstring{CompareScheduledJobId()}{CompareScheduledJobId()}}
+{\footnotesize\ttfamily int Compare\+Scheduled\+Job\+Id (\begin{DoxyParamCaption}\item[{void $\ast$}]{job\+Data,  }\item[{void $\ast$}]{ptr\+Id }\end{DoxyParamCaption})}
+
+
+
+Compares a \mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}}\textquotesingle{}s id with a given id, provided from a generic list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job\+Data} & \\
+\hline
+{\em ptr\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 62 of file scheduled\+Job.\+c.
+
+\mbox{\Hypertarget{scheduled_job_8h_a6f000a0926fbfa02457736de03b200ab}\label{scheduled_job_8h_a6f000a0926fbfa02457736de03b200ab}} 
+\index{scheduledJob.h@{scheduledJob.h}!CreateScheduledJob@{CreateScheduledJob}}
+\index{CreateScheduledJob@{CreateScheduledJob}!scheduledJob.h@{scheduledJob.h}}
+\doxysubsubsection{\texorpdfstring{CreateScheduledJob()}{CreateScheduledJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}} Create\+Scheduled\+Job (\begin{DoxyParamCaption}\item[{char $\ast$}]{job\+Identifier,  }\item[{\mbox{\hyperlink{struct_list}{List}} $\ast$}]{operations,  }\item[{int}]{duration }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}} with given arguments 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job\+Identifier} & \\
+\hline
+{\em operations} & \\
+\hline
+{\em duration} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 26 of file scheduled\+Job.\+c.
+
+\mbox{\Hypertarget{scheduled_job_8h_ab40ce88c087657354f45ce962168e644}\label{scheduled_job_8h_ab40ce88c087657354f45ce962168e644}} 
+\index{scheduledJob.h@{scheduledJob.h}!DeleteScheduledJob@{DeleteScheduledJob}}
+\index{DeleteScheduledJob@{DeleteScheduledJob}!scheduledJob.h@{scheduledJob.h}}
+\doxysubsubsection{\texorpdfstring{DeleteScheduledJob()}{DeleteScheduledJob()}}
+{\footnotesize\ttfamily void$\ast$ Delete\+Scheduled\+Job (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Free memory from a \mbox{\hyperlink{struct_scheduled_job}{Scheduled\+Job}} structure from a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 78 of file scheduled\+Job.\+c.
+
+\mbox{\Hypertarget{scheduled_job_8h_a6e93f827bfecec0c83a9c5d20d529729}\label{scheduled_job_8h_a6e93f827bfecec0c83a9c5d20d529729}} 
+\index{scheduledJob.h@{scheduledJob.h}!ShowScheduledJob@{ShowScheduledJob}}
+\index{ShowScheduledJob@{ShowScheduledJob}!scheduledJob.h@{scheduledJob.h}}
+\doxysubsubsection{\texorpdfstring{ShowScheduledJob()}{ShowScheduledJob()}}
+{\footnotesize\ttfamily void Show\+Scheduled\+Job (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Print values of a \mbox{\hyperlink{struct_scheduled_operation}{Scheduled\+Operation}} from a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Generic pointer from a generic list \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file scheduled\+Job.\+c.
+

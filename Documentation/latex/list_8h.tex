@@ -1,0 +1,178 @@
+\hypertarget{list_8h}{}\doxysection{F\+J\+S\+S\+P-\/\+Advanced-\/\+Manipulations/list.h File Reference}
+\label{list_8h}\index{FJSSP-\/Advanced-\/Manipulations/list.h@{FJSSP-\/Advanced-\/Manipulations/list.h}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_list}{List}}
+\begin{DoxyCompactList}\small\item\em Defines a generic list \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_list}{List}} \mbox{\hyperlink{list_8h_a61366e7da8638d66a464a4a6f4799199}{List}}
+\begin{DoxyCompactList}\small\item\em Defines a generic list \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_list}{List}} $\ast$ \mbox{\hyperlink{list_8h_a5b099aad9925d472bc1a28a7ecff377a}{Insert\+List\+Item}} (\mbox{\hyperlink{struct_list}{List}} $\ast$list, void $\ast$new\+Data, int($\ast$compare)(void $\ast$data1, void $\ast$data2))
+\begin{DoxyCompactList}\small\item\em Inserts a new element on a generic list. Insertion on tail -\/$>$ New elements are inserted at the end of list \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_list}{List}} $\ast$ \mbox{\hyperlink{list_8h_a71b975d5414a0f1d544fcb46188b7dd6}{Search\+Element}} (\mbox{\hyperlink{struct_list}{List}} $\ast$list, void $\ast$data, int($\ast$compare)(void $\ast$data1, void $\ast$data2))
+\item 
+int \mbox{\hyperlink{list_8h_ad0453185897f793745c8f09ecd07182b}{Element\+Exists}} (\mbox{\hyperlink{struct_list}{List}} $\ast$list, void $\ast$data, int($\ast$compare)(void $\ast$data1, void $\ast$data2))
+\begin{DoxyCompactList}\small\item\em Checks if an element exists on a generic list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{list_8h_abcf5fd0ccfba769c01f0d3b5d0b9dc6b}{Show\+Elements}} (\mbox{\hyperlink{struct_list}{List}} $\ast$list, void($\ast$show)(void $\ast$data))
+\begin{DoxyCompactList}\small\item\em Print elements of a list \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_list}{List}} $\ast$ \mbox{\hyperlink{list_8h_a48362dc32d1bdcf4d5b9696769c8f2b3}{Remove\+Element}} (\mbox{\hyperlink{struct_list}{List}} $\ast$list, void $\ast$data, int($\ast$compare)(void $\ast$data1, void $\ast$data2), void $\ast$($\ast$delete)(void $\ast$data))
+\begin{DoxyCompactList}\small\item\em Removes an element from a list \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_list}{List}} $\ast$ \mbox{\hyperlink{list_8h_a8b23214c9da8c8a73ebc0a22b0977646}{Delete\+List}} (\mbox{\hyperlink{struct_list}{List}} $\ast$list, void $\ast$($\ast$delete)(void $\ast$data))
+\begin{DoxyCompactList}\small\item\em Removes all elements on a \mbox{\hyperlink{struct_list}{List}}, leaving it empty \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{list_8h_a61366e7da8638d66a464a4a6f4799199}\label{list_8h_a61366e7da8638d66a464a4a6f4799199}} 
+\index{list.h@{list.h}!List@{List}}
+\index{List@{List}!list.h@{list.h}}
+\doxysubsubsection{\texorpdfstring{List}{List}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_list}{List}} \mbox{\hyperlink{struct_list}{List}}}
+
+
+
+Defines a generic list 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{list_8h_a8b23214c9da8c8a73ebc0a22b0977646}\label{list_8h_a8b23214c9da8c8a73ebc0a22b0977646}} 
+\index{list.h@{list.h}!DeleteList@{DeleteList}}
+\index{DeleteList@{DeleteList}!list.h@{list.h}}
+\doxysubsubsection{\texorpdfstring{DeleteList()}{DeleteList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_list}{List}}$\ast$ Delete\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} $\ast$}]{list,  }\item[{void $\ast$($\ast$)(void $\ast$data)}]{delete }\end{DoxyParamCaption})}
+
+
+
+Removes all elements on a \mbox{\hyperlink{struct_list}{List}}, leaving it empty 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 207 of file list.\+c.
+
+\mbox{\Hypertarget{list_8h_ad0453185897f793745c8f09ecd07182b}\label{list_8h_ad0453185897f793745c8f09ecd07182b}} 
+\index{list.h@{list.h}!ElementExists@{ElementExists}}
+\index{ElementExists@{ElementExists}!list.h@{list.h}}
+\doxysubsubsection{\texorpdfstring{ElementExists()}{ElementExists()}}
+{\footnotesize\ttfamily int Element\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} $\ast$}]{list,  }\item[{void $\ast$}]{data,  }\item[{int($\ast$)(void $\ast$data1, void $\ast$data2)}]{compare }\end{DoxyParamCaption})}
+
+
+
+Checks if an element exists on a generic list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+{\em data} & \\
+\hline
+{\em compare} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 56 of file list.\+c.
+
+\mbox{\Hypertarget{list_8h_a5b099aad9925d472bc1a28a7ecff377a}\label{list_8h_a5b099aad9925d472bc1a28a7ecff377a}} 
+\index{list.h@{list.h}!InsertListItem@{InsertListItem}}
+\index{InsertListItem@{InsertListItem}!list.h@{list.h}}
+\doxysubsubsection{\texorpdfstring{InsertListItem()}{InsertListItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_list}{List}}$\ast$ Insert\+List\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} $\ast$}]{list,  }\item[{void $\ast$}]{new\+Data,  }\item[{int($\ast$)(void $\ast$data1, void $\ast$data2)}]{compare }\end{DoxyParamCaption})}
+
+
+
+Inserts a new element on a generic list. Insertion on tail -\/$>$ New elements are inserted at the end of list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+{\em data} & \\
+\hline
+{\em compare} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 72 of file list.\+c.
+
+\mbox{\Hypertarget{list_8h_a48362dc32d1bdcf4d5b9696769c8f2b3}\label{list_8h_a48362dc32d1bdcf4d5b9696769c8f2b3}} 
+\index{list.h@{list.h}!RemoveElement@{RemoveElement}}
+\index{RemoveElement@{RemoveElement}!list.h@{list.h}}
+\doxysubsubsection{\texorpdfstring{RemoveElement()}{RemoveElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_list}{List}}$\ast$ Remove\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} $\ast$}]{list,  }\item[{void $\ast$}]{data,  }\item[{int($\ast$)(void $\ast$data1, void $\ast$data2)}]{compare,  }\item[{void $\ast$($\ast$)(void $\ast$data)}]{delete }\end{DoxyParamCaption})}
+
+
+
+Removes an element from a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+{\em data} & \\
+\hline
+{\em compare} & \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 157 of file list.\+c.
+
+\mbox{\Hypertarget{list_8h_a71b975d5414a0f1d544fcb46188b7dd6}\label{list_8h_a71b975d5414a0f1d544fcb46188b7dd6}} 
+\index{list.h@{list.h}!SearchElement@{SearchElement}}
+\index{SearchElement@{SearchElement}!list.h@{list.h}}
+\doxysubsubsection{\texorpdfstring{SearchElement()}{SearchElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_list}{List}}$\ast$ Search\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} $\ast$}]{list,  }\item[{void $\ast$}]{data,  }\item[{int($\ast$)(void $\ast$data1, void $\ast$data2)}]{compare }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file list.\+c.
+
+\mbox{\Hypertarget{list_8h_abcf5fd0ccfba769c01f0d3b5d0b9dc6b}\label{list_8h_abcf5fd0ccfba769c01f0d3b5d0b9dc6b}} 
+\index{list.h@{list.h}!ShowElements@{ShowElements}}
+\index{ShowElements@{ShowElements}!list.h@{list.h}}
+\doxysubsubsection{\texorpdfstring{ShowElements()}{ShowElements()}}
+{\footnotesize\ttfamily void Show\+Elements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} $\ast$}]{list,  }\item[{void($\ast$)(void $\ast$data)}]{show }\end{DoxyParamCaption})}
+
+
+
+Print elements of a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & \\
+\hline
+{\em show} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 115 of file list.\+c.
+
