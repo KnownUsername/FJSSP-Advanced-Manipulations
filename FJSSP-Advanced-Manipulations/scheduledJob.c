@@ -14,6 +14,7 @@
 
 #include "scheduledJob.h"
 #include <string.h>
+#include "list.h"
 
 /// <summary>
 /// Creates a ScheduledJob with given arguments
@@ -32,4 +33,39 @@ ScheduledJob CreateScheduledJob(char* jobIdentifier, List* operations, int durat
 	newJob.duration = duration;
 
 	return newJob;
+}
+
+/// <summary>
+/// Print values of a ScheduledOperation from a list
+/// </summary>
+/// <param name="data"></param>
+void ShowScheduledJob(void* data) {
+	
+	// Data type cast
+	ScheduledJob* job = (ScheduledJob*)data;
+
+	// Empty data is discarded
+	if (!job) return;
+
+	printf("Identifier: %s\n", job->jobIdentifier);
+	ShowElements(job->operations, ShowScheduledOperation);
+	printf("Duration: %d\n", job->duration);
+}
+
+/// <summary>
+/// Compares a ScheduledJob's id with a given id, 
+/// provided from a generic list
+/// </summary>
+/// <param name="jobData"></param>
+/// <param name="ptrId"></param>
+/// <returns></returns>
+int CompareScheduledJobId(void* jobData, void* ptrId) {
+
+	// Data casts to desired type
+	ScheduledJob* job = (ScheduledJob*)jobData;
+	int id = (int)ptrId;
+
+	// Data comparisons
+	if (!strcmp(job->jobIdentifier, id)) return 1;
+	else return 0;
 }
