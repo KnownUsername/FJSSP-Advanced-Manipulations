@@ -14,6 +14,7 @@
 #include "list.h"
 #include "scheduledOperation.h"
 #include <stdio.h>
+#include "scheduledJob.h"
 
 
 int main() {
@@ -41,6 +42,8 @@ int main() {
 	scheduledOperations = RemoveElement(scheduledOperations, 35,CompareScheduledOperationId, DeleteScheduledOperation);
 
 	ShowElements(scheduledOperations, ShowScheduledOperation);
+
+	ScheduledJob scheduledJob = CreateScheduledJob("pr 1.1", NULL, 6);
 
 	return 0;
 }
