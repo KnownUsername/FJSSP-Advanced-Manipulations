@@ -124,6 +124,12 @@ void ShowElements(List* list, void (*show)(void* data)) {
 	}
 }
 
+/// <summary>
+/// Delete an Element of a List
+/// </summary>
+/// <param name="elementToRemove"></param>
+/// <param name="data"></param>
+/// <returns></returns>
 List* DeleteElement(List* elementToRemove, void* (*delete)(void* data)) {
 
 	// Disconnect element from the list
@@ -135,8 +141,8 @@ List* DeleteElement(List* elementToRemove, void* (*delete)(void* data)) {
 	// Free memory from element being removed
 	free(elementToRemove);
 
-	// Retrieve element with new state => empty
-	return elementToRemove;
+	// Retrieve NULL, no address to point to
+	return NULL;
 
 }
 
@@ -192,3 +198,24 @@ List* RemoveElement(List* list, void* data, int (*compare)(void* data1, void* da
 	return list;
 }
 
+/// <summary>
+/// Removes all elements on a List, leaving it empty
+/// </summary>
+/// <param name="list"></param>
+/// <param name="data"></param>
+/// <returns></returns>
+List* DeleteList(List* list, void* (*delete)(void* data)) {
+
+	if (list)
+	{
+
+		// Recursive till last element
+		list->next = DeleteList(list->next, delete);
+
+		// Delete current element
+		list = DeleteElement(list, delete);
+
+	}
+	
+	return list;
+}

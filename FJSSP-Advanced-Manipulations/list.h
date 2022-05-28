@@ -23,4 +23,7 @@ void ShowElements(List* list, void (*show)(void* data));
 
 // Removes an element from a list
 List* RemoveElement(List* list, void* data, int (*compare)(void* data1, void* data2), void* (*delete)(void* data));
+
+// Removes all elements on a List, leaving it empty
+List* DeleteList(List* list, void* (*delete)(void* data));
 #endif
