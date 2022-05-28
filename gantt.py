@@ -12,7 +12,7 @@ df['delta'] = df['end_time'] - df['start_time']
 df['job'] = df['job'].astype(str)
 
 # Setup Gantt
-fig = px.timeline(df, x_start="start_time", x_end="end_time", y="machine", range_x = (0,50), color='job')
+fig = px.timeline(df, x_start="start_time", x_end="end_time", y="machine", range_x = (0,50), color='job', hover_data=['operation'])
 
 # To show machine's id ascendingly
 fig.update_yaxes(autorange="reversed")
