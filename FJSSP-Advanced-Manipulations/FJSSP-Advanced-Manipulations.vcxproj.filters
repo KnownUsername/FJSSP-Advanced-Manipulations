@@ -36,6 +36,9 @@
     <ClCompile Include="scheduledJob.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="weightedProcess.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="process.h">

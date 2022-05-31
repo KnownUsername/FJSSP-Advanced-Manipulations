@@ -70,7 +70,7 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> numpy <span class="keyword">as</span> np</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"># Load data</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespacegantt.html#ab52c96bea30646abf8170f333bbd42b9">    6</a></span>&#160;df = pd.read_csv(<span class="stringliteral">&#39;output_example.csv&#39;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespacegantt.html#afa8196d51f74e537c9bf969689a96da9">    6</a></span>&#160;df = pd.read_csv(<span class="stringliteral">&#39;output_example.csv&#39;</span>)</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"># Add a column for the delta (difference between times)</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;df[<span class="stringliteral">&#39;delta&#39;</span>] = df[<span class="stringliteral">&#39;end_time&#39;</span>] - df[<span class="stringliteral">&#39;start_time&#39;</span>]</div>
@@ -80,20 +80,20 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"># Setup Gantt</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespacegantt.html#a64aa603bc3c6c1587e7c6542452481ac">   16</a></span>&#160;fig = px.timeline(df, x_start=<span class="stringliteral">&quot;start_time&quot;</span>, x_end=<span class="stringliteral">&quot;end_time&quot;</span>, y=<span class="stringliteral">&quot;machine&quot;</span>, color=<span class="stringliteral">&#39;job&#39;</span>, hover_data=[<span class="stringliteral">&#39;operation&#39;</span>])</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespacegantt.html#a0bbda4aff44240ea5d78e56cbc353592">   16</a></span>&#160;fig = px.timeline(df, x_start=<span class="stringliteral">&quot;start_time&quot;</span>, x_end=<span class="stringliteral">&quot;end_time&quot;</span>, y=<span class="stringliteral">&quot;machine&quot;</span>, color=<span class="stringliteral">&#39;job&#39;</span>, hover_data=[<span class="stringliteral">&#39;operation&#39;</span>])</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"># To show machine&#39;s id ascendingly</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacegantt.html#ad06fa6399f86330af4964072d553a46a">   19</a></span>&#160;fig.update_yaxes(autorange=<span class="stringliteral">&quot;reversed&quot;</span>)</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacegantt.html#a92dd70080de2684da7b175288cc7bdce">   19</a></span>&#160;fig.update_yaxes(autorange=<span class="stringliteral">&quot;reversed&quot;</span>)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"># Update the layout -&gt; Allow int values for time, instead of timestamps</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespacegantt.html#a7aead736a07eaf25623ad7bfa1f0ee2d">   22</a></span>&#160;fig.layout.xaxis.type = <span class="stringliteral">&#39;linear&#39;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespacegantt.html#ae911264376b87f790afc3d4b8cb37577">   22</a></span>&#160;fig.layout.xaxis.type = <span class="stringliteral">&#39;linear&#39;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"># Fill data to each job, using delta values </span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordflow">for</span> i <span class="keywordflow">in</span> np.arange(len(df[<span class="stringliteral">&#39;job&#39;</span>].unique())):</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespacegantt.html#a9336ebf25087d91c818ee6e9ec29f8c1">   26</a></span>&#160;    fig.data[i].x = df.delta.tolist()</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespacegantt.html#a82c62cbb4552f38871a3acdb82436cf1">   26</a></span>&#160;    fig.data[i].x = df.delta.tolist()</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"># Save output as html file and open to view</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespacegantt.html#ab10971f075ec46b36e4afcb087e25a80">   29</a></span>&#160;fig.write_html(<span class="stringliteral">&#39;first_figure.html&#39;</span>, auto_open=<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespacegantt.html#a0c1099a284b00f3483a5cc13a2a9988f">   29</a></span>&#160;fig.write_html(<span class="stringliteral">&#39;first_figure.html&#39;</span>, auto_open=<span class="keyword">True</span>)</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

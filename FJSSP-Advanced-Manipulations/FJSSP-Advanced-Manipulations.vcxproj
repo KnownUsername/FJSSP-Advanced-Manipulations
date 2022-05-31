@@ -146,6 +146,7 @@
     <ClCompile Include="scheduledJob.c" />
     <ClCompile Include="scheduledOperation.c" />
     <ClCompile Include="tests.c" />
+    <ClCompile Include="weightedProcess.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="job.h" />

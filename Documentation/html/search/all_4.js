@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fig_28',['fig',['../namespacegantt.html#a64aa603bc3c6c1587e7c6542452481ac',1,'gantt']]],
-  ['fullduration_29',['fullDuration',['../struct_job_process.html#a67c7f80f31f84fe0e6f2011b93e5d476',1,'JobProcess']]]
+  ['fig_30',['fig',['../namespacegantt.html#a0bbda4aff44240ea5d78e56cbc353592',1,'gantt']]],
+  ['fullduration_31',['fullDuration',['../struct_job_process.html#a6a37571119b4ba85a0081fd58fef3a42',1,'JobProcess']]]
 ];
