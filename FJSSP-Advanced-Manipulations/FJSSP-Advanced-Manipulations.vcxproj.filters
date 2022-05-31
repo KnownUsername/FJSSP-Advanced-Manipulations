@@ -39,6 +39,9 @@
     <ClCompile Include="weightedProcess.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="weightedOperation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="process.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="weightedProcess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="weightedOperation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
