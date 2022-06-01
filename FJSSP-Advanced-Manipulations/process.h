@@ -94,4 +94,6 @@ ProcessList* SearchProcessesByTime(ProcessList* processList, int time);
 // Sums times' values and counts the occurences
 int SumAndCountTimesOnProcessList(ProcessList* processList, int* counter);
 
+// Counts processes which takes longer than average time and counts Processes
+int CountHigherThanAvgAndCountTimesOnProcesses(ProcessList* processes, float averageTime, int* counter);
 #endif

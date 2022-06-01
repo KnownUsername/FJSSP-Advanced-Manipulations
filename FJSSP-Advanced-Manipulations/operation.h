@@ -74,6 +74,10 @@ int OperationExists(OperationList* operationList, int opIdentifier);
 // Calculates average time of Operations, to complete a Process 
 float CalculateAverageOperationProcessTime(OperationList* operationList);
 
+// Calculates probability of a Process to take longer than average time
+float ProbWorstThanAverage(OperationList* operations, float averageTime);
+
+
 #pragma endregion
 
 #endif

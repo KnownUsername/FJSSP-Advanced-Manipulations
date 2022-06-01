@@ -484,3 +484,27 @@ int SumAndCountTimesOnProcessList(ProcessList* processList, int* counter) {
 
 	return sum;
 }
+
+/// <summary>
+/// Counts processes which takes longer than average time and counts Processes
+/// </summary>
+/// <param name="processes"></param>
+/// <param name="averageTime"></param>
+/// <param name="counter"></param>
+/// <returns></returns>
+int CountHigherThanAvgAndCountTimesOnProcesses(ProcessList* processes, float averageTime, int* counter) {
+
+	int countHTAvg = 0;
+	*counter = 0;
+
+	while (processes) {
+
+		// Check if process's time is higher than average time
+		if (processes->process.time > averageTime) countHTAvg++;
+
+		// Update counter
+		*counter++;
+	}
+
+	return countHTAvg;
+}

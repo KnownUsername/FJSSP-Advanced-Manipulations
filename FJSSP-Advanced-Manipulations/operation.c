@@ -261,3 +261,38 @@ float CalculateAverageOperationProcessTime(OperationList* operationList) {
 
 	return average;
 }
+
+/// <summary>
+/// Calculates probability of a Process to take longer than average time
+/// of a list of Operations
+/// </summary>
+/// <param name="operations"></param>
+/// <param name="averageTime"></param>
+/// <returns></returns>
+float ProbWorstThanAverage(OperationList* operations, float averageTime) {
+
+	// Variables initialized as 0 to sum values into them
+	int processesCounter = 0, badTimesCounter = 0, badTimesCounterOperation = 0;
+	float probabilityWorst;
+
+	// -1 for empty list
+	if (!operations) return -1;
+
+	// Navigate through list
+	while (operations) {
+
+		// Get counter of processes with time higher than average and counter of processes from Operation
+		processesCounter = CountHigherThanAvgAndCountTimesOnProcesses(operations->operation.alternProcesses, averageTime, &badTimesCounterOperation);
+
+		// Update counter with counter passed on previous function
+		badTimesCounter += badTimesCounterOperation;
+
+		// Go to next Operation
+		operations = operations->nextOperation;
+	}
+
+	// Calcul of probability (times higher than average / number of processes)
+	probabilityWorst = (float)badTimesCounter / processesCounter;
+
+	return probabilityWorst;
+}
