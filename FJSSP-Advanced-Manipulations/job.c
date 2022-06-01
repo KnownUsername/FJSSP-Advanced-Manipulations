@@ -223,3 +223,21 @@ void ShowJobProcess(JobProcess jobProcess) {
     ShowOperationList(jobProcess.job.operations);
     printf("Total time: %d", jobProcess.fullDuration);
 }
+
+/// <summary>
+/// Compares a Job's id with a given id,
+/// from a list
+/// </summary>
+/// <param name="jobData"></param>
+/// <param name="ptrId"></param>
+/// <returns></returns>
+int CompareJobs(void* jobData, int* ptrId) {
+
+    // Data casts to desired type
+    Job* job = (Job*)jobData;
+    int id = (int)ptrId;
+
+    // Data comparisons
+    if (job == id) return 1;
+    else return 0;
+}

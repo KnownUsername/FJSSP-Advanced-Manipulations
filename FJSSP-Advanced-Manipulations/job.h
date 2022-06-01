@@ -68,6 +68,9 @@ void ShowJob(Job job);
 // Prints values of a JobProcess
 void ShowJobProcess(JobProcess jobProcess);
 
+// Compares a Job's id with a given id,
+// from a list
+int CompareJobs(void* jobData, int* ptrId);
 #pragma endregion
 
 #endif
