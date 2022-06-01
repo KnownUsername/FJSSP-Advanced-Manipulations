@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
+#include "list.h"
 #pragma warning(disable: 4996)
 
 /// <summary>
@@ -231,14 +232,13 @@ void ShowJobProcess(JobProcess jobProcess) {
 /// <param name="jobData"></param>
 /// <param name="ptrId"></param>
 /// <returns></returns>
-int CompareJobs(void* jobData, int* ptrId) {
+int CompareJobs(void* jobData, char* ptrId) {
 
-    // Data casts to desired type
+    // Data cast to desired type
     Job* job = (Job*)jobData;
-    int id = (int)ptrId;
 
     // Data comparisons
-    if (job == id) return 1;
+    if (!strcmp(job->jobIdentifier,ptrId)) return 1;
     else return 0;
 }
 
@@ -289,4 +289,86 @@ Job CreateJob(char* jobIdentifier, OperationList* operations) {
     job.operations = operations;
 
     return job;
+}
+
+/// <summary>
+/// Inserts values of multiple Jobs from a file
+/// status takes value 1 if it loaded with success
+///                 or 0 if file not found
+/// </summary>
+/// <param name="filename">Path of the file</param>
+/// <returns>Loaded Job from file </returns>
+List* LoadJobs(char filename[], int* status) {
+
+    Job* jobToAdd;
+    List* jobs = NULL, * jobListPtr = NULL;
+
+
+    Operation* operationElement = NULL;
+    Process process;
+
+    Operation operation;
+
+    FILE* fp;
+    char processPlan[100], column2[100], column3[100], column4[100];
+    int operationId;
+
+    // Read file
+    fp = fopen(filename, "r");
+
+    // Verify if file exists
+    if (!fp) {
+        *status = 0;
+        return jobs;
+    }
+
+    // Skip 1st line (columns' names)
+    if (!feof(fp)) fscanf(fp, "%[^\,],%[^\,],%[^\,]\,%[^\n]\n", processPlan, column2, column3, column4);
+
+    // Walk through file
+    while (!feof(fp)) {
+
+        Job job;
+        job.operations = NULL;
+
+        fscanf(fp, "%[^\,]\,%d\,%d\,%d\n", processPlan, &operationId, &process.machine, &process.time); // Get fields from each line
+
+        printf("%s, %d, %d, %d\n", processPlan, operationId, process.machine, process.time);
+        // Create a Job with received identifier 
+        job = CreateJob(processPlan, NULL);
+
+        // Insert Job if there's no job with received identifier 
+        jobs = InsertListItem(jobs, &job, CompareJobs);
+
+        // Get address from allocated Job on list
+        jobListPtr = SearchElement(jobs, processPlan, CompareJobs);
+
+        // Get Address of wanted Job
+        jobToAdd = (Job*)jobListPtr->data;
+
+        // On operations that are already present on a job, simply add the new Process to it
+        if (OperationExists(jobToAdd->operations, operationId)) {
+
+            // Find pointer to Operation inputted
+            operationElement = SearchOperation(jobToAdd->operations, operationId);
+
+            // Insert new process on Operation
+            operationElement->alternProcesses = InsertProcess(operationElement->alternProcesses, process);
+        }
+
+        // Add new Operation
+        else {
+            // Create new operation with associated Process on same file line
+            operation = CreateOperation(operationId, InsertProcess(NULL, process));
+
+            // Add new operation to the job
+            job.operations = InsertOperation(job.operations, operation);
+        }
+    }
+
+    // Delete file's buffer
+    fclose(fp);
+
+    *status = 1;
+    return jobs;
 }

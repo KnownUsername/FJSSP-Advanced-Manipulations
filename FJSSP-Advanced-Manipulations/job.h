@@ -16,6 +16,7 @@
 #define JOB
 
 #include "operation.h"
+#include "list.h"
 
 #pragma region STRUCTURES
 
@@ -83,6 +84,8 @@ int CompareJobs(void* jobData, int* ptrId);
 // Free memory from a Job structure from a generic list
 void* DeleteJobDataFromList(void* data);
 
+// Inserts values of multiple Job from a file
+List* LoadJobs(char filename[], int* status);
 #pragma endregion
 
 #endif

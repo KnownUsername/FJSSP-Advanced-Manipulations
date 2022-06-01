@@ -38,7 +38,7 @@ ScheduledJob CreateScheduledJob(char* jobIdentifier, List* operations, int durat
 /// <summary>
 /// Print values of a ScheduledOperation from a list
 /// </summary>
-/// <param name="data"></param>
+/// <param name="data"> Generic pointer from a generic list </param>
 void ShowScheduledJob(void* data) {
 	
 	// Data type cast

@@ -18,4 +18,12 @@ WeightedJob CreateWeightedJob(Job job, float processPercent);
 // Compares a WeightedJob's id with a given id,
 // provided from a generic list
 int CompareWeightedJobs(void* jobData, void* ptrId);
+
+// Create all WeightedJobs from a list of jobs 
+// and group it on a list
+List* GenerateWeightedJobs(List* jobs, float processPercent);
+
+// Print values of a WeightedJob from a generic list
+void ShowWeightedJob(void* data);
+
 #endif 

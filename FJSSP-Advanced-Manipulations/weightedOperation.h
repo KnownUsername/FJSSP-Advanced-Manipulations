@@ -1,6 +1,7 @@
 #ifndef WEIGHT_OPERATION
 #define WEIGHT_OPERATION
 #include"list.h"
+#include"operation.h"
 
 /// <summary>
 /// Defines an Operation constituded by Processes with weights
@@ -17,4 +18,6 @@ WeightedOperation CreateWeightedOperation(Operation operation, char* jobIdentifi
 // provided from a generic list
 int CompareWeightedProcesses(void* operationData, void* ptrId);
 
+// Print values of a WeightedOperation from a generic list
+void ShowWeightedOperation(void* data);
 #endif

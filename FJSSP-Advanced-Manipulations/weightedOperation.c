@@ -53,3 +53,21 @@ WeightedOperation CreateWeightedOperation(Operation operation, char* jobIdentifi
 	return weightedOperation;
 
 }
+
+/// <summary>
+/// Print values of a WeightedOperation from a generic list
+/// </summary>
+/// <param name="data"></param>
+void ShowWeightedOperation(void* data) {
+
+	// Data type cast
+	WeightedOperation* operation = (WeightedOperation*)data;
+
+	// Discard empty operation
+	if (!operation) return;
+
+	printf("Id: %d\n", operation->operationId);
+
+	// Show Processes associated if the list is not empty
+	if (operation->weightedProcesses) ShowElements(operation->weightedProcesses, ShowWeightedOperation);
+}

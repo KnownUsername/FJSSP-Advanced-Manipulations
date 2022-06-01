@@ -65,3 +65,50 @@ int CompareWeightedJobs(void* jobData, void* ptrId) {
 	if (job->jobId == id) return 1;
 	else return 0;
 }
+
+/// <summary>
+/// Create all WeightedJobs from a list of jobs 
+/// and group it on a list
+/// </summary>
+/// <param name="jobs"></param>
+/// <param name="processPercent"></param>
+/// <returns></returns>
+List* GenerateWeightedJobs(List* jobs, float processPercent) {
+	
+	List* weightedJobs = NULL;
+	WeightedJob generatedWeightedJob;
+	Job* currentJob;
+
+	while (jobs) {
+
+		// Get element's Job from generic List
+		currentJob = (Job*)jobs->data;
+
+		// Create respective Weighted Job
+		generatedWeightedJob = CreateWeightedJob(*currentJob, processPercent);
+
+		// Insert generated WeightedJob on list
+		weightedJobs = InsertListItem(weightedJobs, &generatedWeightedJob, CompareWeightedJobs);
+
+		// Go to next job
+		jobs = jobs->next;
+	}
+
+	return weightedJobs;
+}
+/// <summary>
+/// Print values of a WeightedJob from a generic list
+/// </summary>
+/// <param name="data"></param>
+void ShowWeightedJob(void* data) {
+
+	WeightedJob* job = (WeightedJob*)data;
+
+	// Discard empty job
+	if (!job) return;
+
+	printf("Job: %s\n", job->weightedOperations);
+
+	if (job->weightedOperations) ShowElements(job->weightedOperations, ShowWeightedOperation);
+}
+

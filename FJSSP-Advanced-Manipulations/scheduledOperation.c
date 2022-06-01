@@ -106,6 +106,6 @@ void* DeleteScheduledOperation(void* data) {
 	// Free memory from process
 	free(operation->process);
 
-	// Return file without memory allocated from mallocs
+	// Return operation without memory allocated from mallocs
 	return operation;
 }

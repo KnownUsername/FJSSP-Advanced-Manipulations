@@ -12,59 +12,25 @@
 */
 
 #include "list.h"
-#include "scheduledOperation.h"
+//#include "scheduledOperation.h"
 #include <stdio.h>
-#include "scheduledJob.h"
-
+//#include "scheduledJob.h"
+#include "job.h"
+#include"weightedJob.h"
 
 int main() {
 
-	List* scheduledOperations = NULL;
+	int status;
 
-	ScheduledOperation scheduledOperation = CreateScheduledOperation(76, NULL, 0, 2);
+	// Load of a csv with multiple Jobs
+	List* jobs = LoadJobs("../template_data.csv", &status);
 
-	scheduledOperations = InsertListItem(scheduledOperations, &scheduledOperation,CompareScheduledOperations);
+	ShowElements(jobs, ShowJob);
 
-	ScheduledOperation scheduledOperation2 = CreateScheduledOperation(35, NULL, 3, 4);
-	scheduledOperations = InsertListItem(scheduledOperations, &scheduledOperation2,CompareScheduledOperations);
-	scheduledOperations = InsertListItem(scheduledOperations, &scheduledOperation2, CompareScheduledOperations);
+	printf("%d", status);
+	List* weightedJobs = GenerateWeightedJobs(jobs, 60);
 
-	int number = 1;
-	
-	List* auxResult = SearchElement(scheduledOperations, number, CompareScheduledOperationId);
-	if (auxResult) {
-		ScheduledOperation* result = (ScheduledOperation*)auxResult->data;
-	}
-	else printf("Bye World\n");
+	ShowElements(weightedJobs, ShowWeightedJob);
 
-	//ShowElements(scheduledOperations, ShowScheduledOperation);
-	printf("\n\n Ora viva!\n\n");
-	//scheduledOperations = RemoveElement(scheduledOperations, 35,CompareScheduledOperationId, DeleteScheduledOperation);
-
-	//ShowElements(scheduledOperations, ShowScheduledOperation);
-
-	ScheduledJob scheduledJob = CreateScheduledJob("pr 1.1", scheduledOperations, 6);
-
-	List* jobs = NULL;
-
-	jobs = InsertListItem(jobs, &scheduledJob, CompareScheduledJobId);
-
-	ShowElements(jobs, ShowScheduledJob);
-
-	/*scheduledOperations = DeleteList(scheduledOperations, DeleteScheduledOperation);
-
-	puts("\n\n");
-	
-	if (!scheduledOperations) printf("Empty List\n");
-	else printf("Unintended behavior\n");*/
-
-
-	jobs = DeleteList(jobs, DeleteScheduledJob);
-
-	puts("\n\n");
-
-
-	if(!jobs) printf("Empty List\n");
-	else printf("Unintended behavior\n");
 	return 0;
 }
