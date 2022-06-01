@@ -256,3 +256,37 @@ void ShowJobFromList(void* data) {
 
     ShowJob(*job);
 }
+
+/// <summary>
+/// Free memory from a Job structure from a generic list
+/// </summary>
+/// <param name="data"></param>
+/// <returns></returns>
+void* DeleteJobDataFromList(void* data) {
+
+    // Data type cast
+    Job* job = (Job*)data;
+
+    // Free memory from job's operations
+    job->operations = DeleteOperationList(job->operations);
+
+    // Return job without memory allocated from mallocs
+    return job;
+}
+
+/// <summary>
+/// Creates a job with given values
+/// </summary>
+/// <param name="jobIdentifier"></param>
+/// <param name="operations"></param>
+/// <returns></returns>
+Job CreateJob(char* jobIdentifier, OperationList* operations) {
+
+    Job job;
+
+    // Values' attribution
+    job.jobIdentifier = jobIdentifier;
+    job.operations = operations;
+
+    return job;
+}

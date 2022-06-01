@@ -50,6 +50,9 @@ typedef struct JobProcess{
 
 #pragma region FUNCTIONS
 
+// Creates a job with given values
+Job CreateJob(char* jobIdentifier, OperationList* operations);
+
 // Inserts values of 1 Job from a file
 Job LoadJob(char filename[], int* status);
 
@@ -77,6 +80,8 @@ void ShowJobFromList(void* data);
 // from a list
 int CompareJobs(void* jobData, int* ptrId);
 
+// Free memory from a Job structure from a generic list
+void* DeleteJobDataFromList(void* data);
 
 #pragma endregion
 
