@@ -53,6 +53,8 @@ OperationList* RemoveOperation(OperationList* operationList, int opIdentifier);
 // Changes the id of an Operation, on a list
 int ChangeOperationIdOnList(OperationList* operationList, int olderId, int newId);
 
+// Removes all Operations from a list
+OperationList* DeleteOperationList(OperationList* operations);
 #pragma endregion
 
 #pragma region PRINTS

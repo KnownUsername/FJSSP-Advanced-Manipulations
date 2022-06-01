@@ -327,3 +327,25 @@ int GetMaximumDurationOnOperationList(OperationList* operations) {
 
 	return worstTime;
 }
+
+/// <summary>
+/// Removes all Operations from a list
+/// </summary>
+/// <param name="operations"></param>
+/// <returns></returns>
+OperationList* DeleteOperationList(OperationList* operations) {
+
+	if (operations) {
+		
+		// Recursively reach last element
+		operations->nextOperation = DeleteOperationList(operations->nextOperation);
+
+		// Free allocated memory 
+		free(operations);
+
+		// Neutralize pointer's address
+		operations = NULL;
+	}
+	
+	return operations;
+}
