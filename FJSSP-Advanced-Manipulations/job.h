@@ -62,15 +62,22 @@ JobProcess GetMaximumJobProcessLine(Job job);
 // Saves job data into a csv file
 int SaveJob(Job job, char filename[]);
 
+#pragma region PRINTS
 // Prints values of a Job
 void ShowJob(Job job);
 
 // Prints values of a JobProcess
 void ShowJobProcess(JobProcess jobProcess);
 
+// Print values from a Job from a generic list
+void ShowJobFromList(void* data);
+#pragma endregion
+
 // Compares a Job's id with a given id,
 // from a list
 int CompareJobs(void* jobData, int* ptrId);
+
+
 #pragma endregion
 
 #endif

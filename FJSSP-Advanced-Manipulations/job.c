@@ -241,3 +241,18 @@ int CompareJobs(void* jobData, int* ptrId) {
     if (job == id) return 1;
     else return 0;
 }
+
+/// <summary>
+/// Print values from a Job from a generic list
+/// </summary>
+/// <param name="data"></param>
+void ShowJobFromList(void* data) {
+
+    // Data type cast
+    Job* job = (Job*)data;
+
+    // Discard empty jobs
+    if (!job) return;
+
+    ShowJob(*job);
+}
