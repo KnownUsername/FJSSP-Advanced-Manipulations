@@ -146,6 +146,7 @@
     <ClCompile Include="scheduledJob.c" />
     <ClCompile Include="scheduledOperation.c" />
     <ClCompile Include="tests.c" />
+    <ClCompile Include="weightedJob.c" />
     <ClCompile Include="weightedOperation.c" />
     <ClCompile Include="weightedProcess.c" />
   </ItemGroup>
@@ -156,6 +157,7 @@
     <ClInclude Include="process.h" />
     <ClInclude Include="scheduledJob.h" />
     <ClInclude Include="scheduledOperation.h" />
+    <ClInclude Include="weightedJob.h" />
     <ClInclude Include="weightedOperation.h" />
     <ClInclude Include="weightedProcess.h" />
   </ItemGroup>
