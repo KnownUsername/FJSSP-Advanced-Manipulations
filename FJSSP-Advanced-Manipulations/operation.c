@@ -13,9 +13,10 @@
 
 #include "operation.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /// <summary>
-/// Creates a Operation with given values
+/// Creates an Operation with given values
 /// </summary>
 /// <param name="opIdentifier"></param>
 /// <param name="time"></param>
