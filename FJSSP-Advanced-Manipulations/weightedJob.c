@@ -1,7 +1,8 @@
 #include "weightedJob.h"
-#include "job.h"
+
 #include "weightedOperation.h"
 #include "weightedProcess.h"
+#include <stdlib.h>
 
 /// <summary>
 /// Creates a WeightedJob -> A Job containing Operations constituted by Processes with weights for measures
@@ -16,6 +17,7 @@ WeightedJob CreateWeightedJob(Job job, float processPercent) {
 	int maxDuration;
 
 	weightedJob.jobId = job.jobIdentifier;
+	weightedJob.weightedOperations = (List*)malloc(sizeof(List));
 	
 	/*				Intermediate calculus		*/
 	averageTime = CalculateAverageOperationProcessTime(job.operations);
