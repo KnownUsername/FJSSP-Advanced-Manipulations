@@ -45,6 +45,12 @@
     <ClCompile Include="weightedJob.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="menus.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="process.h">
@@ -72,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="weightedJob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="menus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

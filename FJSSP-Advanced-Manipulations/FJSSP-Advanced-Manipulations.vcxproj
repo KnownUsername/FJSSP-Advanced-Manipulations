@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="job.c" />
     <ClCompile Include="list.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="menus.c" />
     <ClCompile Include="operation.c" />
     <ClCompile Include="process.c" />
     <ClCompile Include="scheduledJob.c" />
@@ -153,6 +155,7 @@
   <ItemGroup>
     <ClInclude Include="job.h" />
     <ClInclude Include="list.h" />
+    <ClInclude Include="menus.h" />
     <ClInclude Include="operation.h" />
     <ClInclude Include="process.h" />
     <ClInclude Include="scheduledJob.h" />
