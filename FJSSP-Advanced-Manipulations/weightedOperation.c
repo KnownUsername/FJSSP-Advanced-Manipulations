@@ -33,8 +33,9 @@ WeightedOperation CreateWeightedOperation(Operation operation, char* jobIdentifi
 
 	WeightedOperation weightedOperation;
 	weightedOperation.operationId = operation.opIdentifier;
+	weightedOperation.weightedProcesses = (List*)malloc(sizeof(List));
 
-	ProcessList* processes = weightedOperation.weightedProcesses;
+	ProcessList* processes = operation.alternProcesses;
 
 	WeightedProcess currentWeightedProcess;
 
