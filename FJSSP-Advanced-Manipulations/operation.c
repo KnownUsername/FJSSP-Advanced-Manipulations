@@ -296,3 +296,34 @@ float ProbWorstThanAverage(OperationList* operations, float averageTime) {
 
 	return probabilityWorst;
 }
+
+/// <summary>
+/// Retrieves worst time to execute a Process / Operation, from a list of Operations
+/// </summary>
+/// <param name="operations"></param>
+/// <returns></returns>
+int GetMaximumDurationOnOperationList(OperationList* operations) {
+
+	if (!operations) return -1;
+	int worstTime, worstOperationTime;
+
+	// Get worst value from 1st Operation to initialize variable storing the worst time
+	worstTime = GetMaximumDurationProcess(operations->operation.alternProcesses).time;
+
+	// Advance to next operation, to not evaluate the first again
+	operations = operations->nextOperation;
+
+	while (operations) {
+
+		// Get worst time from an Operation
+		worstOperationTime = GetMaximumDurationProcess(operations->operation.alternProcesses).time;
+	
+		// Assign worst time from current Operation, if higher than last value recorded as worst
+		if (worstOperationTime > worstTime) worstTime = worstOperationTime;
+	
+		// Go to next Operation
+		operations = operations->nextOperation;
+	}
+
+	return worstTime;
+}

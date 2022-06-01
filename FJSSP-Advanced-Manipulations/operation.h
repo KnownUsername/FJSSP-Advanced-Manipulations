@@ -77,7 +77,8 @@ float CalculateAverageOperationProcessTime(OperationList* operationList);
 // Calculates probability of a Process to take longer than average time
 float ProbWorstThanAverage(OperationList* operations, float averageTime);
 
-
+// Retrieves worst time to execute a Process / Operation, from a list of Operations
+int GetMaximumDurationOnOperationList(OperationList* operations);
 #pragma endregion
 
 #endif
