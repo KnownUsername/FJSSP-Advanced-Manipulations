@@ -42,7 +42,9 @@ int \mbox{\hyperlink{process_8c_a202ff96838a15eff2b55d6dcb62c091a}{Change\+Proce
 float \mbox{\hyperlink{process_8c_aa8ea604f49df7a4fa37113148f5c4a03}{Calculate\+Average\+Process\+List\+Time}} (\mbox{\hyperlink{struct_process_list}{Process\+List}} $\ast$process\+List)
 \begin{DoxyCompactList}\small\item\em Calculates average time of a list to complete a \mbox{\hyperlink{struct_process}{Process}} \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{process_8c_a4730b0325f02d143fd2e3921a233742b}{Sum\+And\+Count\+Times\+On\+Process\+List}} (\mbox{\hyperlink{struct_process_list}{Process\+List}} $\ast$process\+List, int $\ast$counter)
-\begin{DoxyCompactList}\small\item\em Sums times\textquotesingle{} values and counts the occurences Count of values is returned via pointer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sums times\textquotesingle{} values and counts the occurences Count of values is returned via pointer \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{process_8c_a5d5eb55c2d62e344d8a6411b090f52d7}{Count\+Higher\+Than\+Avg\+And\+Count\+Times\+On\+Processes}} (\mbox{\hyperlink{struct_process_list}{Process\+List}} $\ast$processes, float average\+Time, int $\ast$counter)
+\begin{DoxyCompactList}\small\item\em Counts processes which takes longer than average time and counts Processes \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -119,6 +121,32 @@ Changes the time of a \mbox{\hyperlink{struct_process}{Process}} of a machine, o
 
 
 Definition at line 249 of file process.\+c.
+
+\mbox{\Hypertarget{process_8c_a5d5eb55c2d62e344d8a6411b090f52d7}\label{process_8c_a5d5eb55c2d62e344d8a6411b090f52d7}} 
+\index{process.c@{process.c}!CountHigherThanAvgAndCountTimesOnProcesses@{CountHigherThanAvgAndCountTimesOnProcesses}}
+\index{CountHigherThanAvgAndCountTimesOnProcesses@{CountHigherThanAvgAndCountTimesOnProcesses}!process.c@{process.c}}
+\doxysubsubsection{\texorpdfstring{CountHigherThanAvgAndCountTimesOnProcesses()}{CountHigherThanAvgAndCountTimesOnProcesses()}}
+{\footnotesize\ttfamily int Count\+Higher\+Than\+Avg\+And\+Count\+Times\+On\+Processes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_process_list}{Process\+List}} $\ast$}]{processes,  }\item[{float}]{average\+Time,  }\item[{int $\ast$}]{counter }\end{DoxyParamCaption})}
+
+
+
+Counts processes which takes longer than average time and counts Processes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em processes} & \\
+\hline
+{\em average\+Time} & \\
+\hline
+{\em counter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 495 of file process.\+c.
 
 \mbox{\Hypertarget{process_8c_a48de4261659da2774cc4c2dcc16f6af9}\label{process_8c_a48de4261659da2774cc4c2dcc16f6af9}} 
 \index{process.c@{process.c}!CreateProcess@{CreateProcess}}

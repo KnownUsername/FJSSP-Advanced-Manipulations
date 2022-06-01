@@ -5,12 +5,19 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_weighted_process}{Weighted\+Process}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Defines a \mbox{\hyperlink{struct_process}{Process}} with weights \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \mbox{\hyperlink{struct_weighted_process}{Weighted\+Process}} \mbox{\hyperlink{weighted_process_8h_abfafab138c0dace75b430c6403d58cfe}{Weighted\+Process}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Defines a \mbox{\hyperlink{struct_process}{Process}} with weights \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_weighted_process}{Weighted\+Process}} \mbox{\hyperlink{weighted_process_8h_a7daa4d0c124d5e39547747c293f4f4ab}{Create\+Weighted\+Process}} (char $\ast$job\+Identifier, int operation\+Id, \mbox{\hyperlink{struct_process}{Process}} $\ast$process, float process\+Percent, float job\+Factor)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{struct_weighted_process}{Weighted\+Process}} -\/$>$ A \mbox{\hyperlink{struct_process}{Process}} with weights for measures \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{weighted_process_8h_aa411059a2f9395f29a1a9d9d9e290a71}{Compare\+Weighted\+Processes}} (void $\ast$data, void $\ast$ptr\+Id)
+\begin{DoxyCompactList}\small\item\em Compares a \mbox{\hyperlink{struct_weighted_process}{Weighted\+Process}}\textquotesingle{}s id with a given id, provided from a generic list \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
@@ -19,4 +26,65 @@ typedef struct \mbox{\hyperlink{struct_weighted_process}{Weighted\+Process}} \mb
 \index{WeightedProcess@{WeightedProcess}!weightedProcess.h@{weightedProcess.h}}
 \doxysubsubsection{\texorpdfstring{WeightedProcess}{WeightedProcess}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_weighted_process}{Weighted\+Process}} \mbox{\hyperlink{struct_weighted_process}{Weighted\+Process}}}
+
+
+
+Defines a \mbox{\hyperlink{struct_process}{Process}} with weights 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{weighted_process_8h_aa411059a2f9395f29a1a9d9d9e290a71}\label{weighted_process_8h_aa411059a2f9395f29a1a9d9d9e290a71}} 
+\index{weightedProcess.h@{weightedProcess.h}!CompareWeightedProcesses@{CompareWeightedProcesses}}
+\index{CompareWeightedProcesses@{CompareWeightedProcesses}!weightedProcess.h@{weightedProcess.h}}
+\doxysubsubsection{\texorpdfstring{CompareWeightedProcesses()}{CompareWeightedProcesses()}}
+{\footnotesize\ttfamily int Compare\+Weighted\+Processes (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{void $\ast$}]{ptr\+Id }\end{DoxyParamCaption})}
+
+
+
+Compares a \mbox{\hyperlink{struct_weighted_process}{Weighted\+Process}}\textquotesingle{}s id with a given id, provided from a generic list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em ptr\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 33 of file weighted\+Process.\+c.
+
+\mbox{\Hypertarget{weighted_process_8h_a7daa4d0c124d5e39547747c293f4f4ab}\label{weighted_process_8h_a7daa4d0c124d5e39547747c293f4f4ab}} 
+\index{weightedProcess.h@{weightedProcess.h}!CreateWeightedProcess@{CreateWeightedProcess}}
+\index{CreateWeightedProcess@{CreateWeightedProcess}!weightedProcess.h@{weightedProcess.h}}
+\doxysubsubsection{\texorpdfstring{CreateWeightedProcess()}{CreateWeightedProcess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_weighted_process}{Weighted\+Process}} Create\+Weighted\+Process (\begin{DoxyParamCaption}\item[{char $\ast$}]{job\+Identifier,  }\item[{int}]{operation\+Id,  }\item[{\mbox{\hyperlink{struct_process}{Process}} $\ast$}]{process,  }\item[{float}]{process\+Percent,  }\item[{float}]{job\+Factor }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{struct_weighted_process}{Weighted\+Process}} -\/$>$ A \mbox{\hyperlink{struct_process}{Process}} with weights for measures 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job\+Identifier} & \\
+\hline
+{\em operation\+Id} & \\
+\hline
+{\em process} & \\
+\hline
+{\em process\+Percent} & Percentage value for \mbox{\hyperlink{struct_process}{Process}} to calculate cedency \\
+\hline
+{\em job\+Factor} & Weight from job pondered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 12 of file weighted\+Process.\+c.
 

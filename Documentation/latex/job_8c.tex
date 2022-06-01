@@ -4,6 +4,7 @@
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}list.\+h\char`\"{}}\newline
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,10 +19,90 @@ int \mbox{\hyperlink{job_8c_a13d701288b2e4109ba576a775d77d82f}{Save\+Job}} (\mbo
 void \mbox{\hyperlink{job_8c_a9e92f18d9e7676a1c17f788169c0dc66}{Show\+Job}} (\mbox{\hyperlink{struct_job}{Job}} job)
 \begin{DoxyCompactList}\small\item\em Prints values of a \mbox{\hyperlink{struct_job}{Job}} \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{job_8c_ab70c24c1db2ededb064a5e2fdf965711}{Show\+Job\+Process}} (\mbox{\hyperlink{struct_job_process}{Job\+Process}} job\+Process)
-\begin{DoxyCompactList}\small\item\em Prints values of a \mbox{\hyperlink{struct_job_process}{Job\+Process}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints values of a \mbox{\hyperlink{struct_job_process}{Job\+Process}} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{job_8c_aa5ef3eaafb8cc02b1eb6600f05736110}{Compare\+Jobs}} (void $\ast$job\+Data, char $\ast$ptr\+Id)
+\begin{DoxyCompactList}\small\item\em Compares a \mbox{\hyperlink{struct_job}{Job}}\textquotesingle{}s id with a given id, from a list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{job_8c_a4c9c0c45d8a2bc4a21dfb5f87143712f}{Show\+Job\+From\+List}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Print values from a \mbox{\hyperlink{struct_job}{Job}} from a generic list \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{job_8c_a788a6a17d24a67d408d09606abe08ef0}{Delete\+Job\+Data\+From\+List}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Free memory from a \mbox{\hyperlink{struct_job}{Job}} structure from a generic list \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} \mbox{\hyperlink{job_8c_a7b9e3d6d9d7ad80e14017ba5921ee5e1}{Create\+Job}} (char $\ast$job\+Identifier, \mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$operations)
+\begin{DoxyCompactList}\small\item\em Creates a job with given values \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_list}{List}} $\ast$ \mbox{\hyperlink{job_8c_a08e455de9e11e971086051de72cfe294}{Load\+Jobs}} (char filename\mbox{[}$\,$\mbox{]}, int $\ast$status)
+\begin{DoxyCompactList}\small\item\em Inserts values of multiple Jobs from a file status takes value 1 if it loaded with success or 0 if file not found \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{job_8c_aa5ef3eaafb8cc02b1eb6600f05736110}\label{job_8c_aa5ef3eaafb8cc02b1eb6600f05736110}} 
+\index{job.c@{job.c}!CompareJobs@{CompareJobs}}
+\index{CompareJobs@{CompareJobs}!job.c@{job.c}}
+\doxysubsubsection{\texorpdfstring{CompareJobs()}{CompareJobs()}}
+{\footnotesize\ttfamily int Compare\+Jobs (\begin{DoxyParamCaption}\item[{void $\ast$}]{job\+Data,  }\item[{char $\ast$}]{ptr\+Id }\end{DoxyParamCaption})}
+
+
+
+Compares a \mbox{\hyperlink{struct_job}{Job}}\textquotesingle{}s id with a given id, from a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job\+Data} & \\
+\hline
+{\em ptr\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 235 of file job.\+c.
+
+\mbox{\Hypertarget{job_8c_a7b9e3d6d9d7ad80e14017ba5921ee5e1}\label{job_8c_a7b9e3d6d9d7ad80e14017ba5921ee5e1}} 
+\index{job.c@{job.c}!CreateJob@{CreateJob}}
+\index{CreateJob@{CreateJob}!job.c@{job.c}}
+\doxysubsubsection{\texorpdfstring{CreateJob()}{CreateJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} Create\+Job (\begin{DoxyParamCaption}\item[{char $\ast$}]{job\+Identifier,  }\item[{\mbox{\hyperlink{struct_operation_list}{Operation\+List}} $\ast$}]{operations }\end{DoxyParamCaption})}
+
+
+
+Creates a job with given values 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job\+Identifier} & \\
+\hline
+{\em operations} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 283 of file job.\+c.
+
+\mbox{\Hypertarget{job_8c_a788a6a17d24a67d408d09606abe08ef0}\label{job_8c_a788a6a17d24a67d408d09606abe08ef0}} 
+\index{job.c@{job.c}!DeleteJobDataFromList@{DeleteJobDataFromList}}
+\index{DeleteJobDataFromList@{DeleteJobDataFromList}!job.c@{job.c}}
+\doxysubsubsection{\texorpdfstring{DeleteJobDataFromList()}{DeleteJobDataFromList()}}
+{\footnotesize\ttfamily void$\ast$ Delete\+Job\+Data\+From\+List (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Free memory from a \mbox{\hyperlink{struct_job}{Job}} structure from a generic list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 265 of file job.\+c.
+
 \mbox{\Hypertarget{job_8c_a24762f3a4eb2b63f2c0eb3253a37225c}\label{job_8c_a24762f3a4eb2b63f2c0eb3253a37225c}} 
 \index{job.c@{job.c}!GetMaximumJobProcessLine@{GetMaximumJobProcessLine}}
 \index{GetMaximumJobProcessLine@{GetMaximumJobProcessLine}!job.c@{job.c}}
@@ -42,7 +123,7 @@ Calculates the maximum duration for a job and its respective path Path is define
 \end{DoxyReturn}
 
 
-Definition at line 134 of file job.\+c.
+Definition at line 135 of file job.\+c.
 
 \mbox{\Hypertarget{job_8c_ae96f33b58305738f5cdc58c67fd73575}\label{job_8c_ae96f33b58305738f5cdc58c67fd73575}} 
 \index{job.c@{job.c}!GetMinimumJobProcessLine@{GetMinimumJobProcessLine}}
@@ -64,7 +145,7 @@ Calculates the minimum duration for a job and its respective path Path is define
 \end{DoxyReturn}
 
 
-Definition at line 94 of file job.\+c.
+Definition at line 95 of file job.\+c.
 
 \mbox{\Hypertarget{job_8c_afd421e028e22d0e53c3445b8a01b39d6}\label{job_8c_afd421e028e22d0e53c3445b8a01b39d6}} 
 \index{job.c@{job.c}!LoadJob@{LoadJob}}
@@ -86,7 +167,29 @@ Loaded \mbox{\hyperlink{struct_job}{Job}} from file
 \end{DoxyReturn}
 
 
-Definition at line 27 of file job.\+c.
+Definition at line 28 of file job.\+c.
+
+\mbox{\Hypertarget{job_8c_a08e455de9e11e971086051de72cfe294}\label{job_8c_a08e455de9e11e971086051de72cfe294}} 
+\index{job.c@{job.c}!LoadJobs@{LoadJobs}}
+\index{LoadJobs@{LoadJobs}!job.c@{job.c}}
+\doxysubsubsection{\texorpdfstring{LoadJobs()}{LoadJobs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_list}{List}}$\ast$ Load\+Jobs (\begin{DoxyParamCaption}\item[{char}]{filename\mbox{[}$\,$\mbox{]},  }\item[{int $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+Inserts values of multiple Jobs from a file status takes value 1 if it loaded with success or 0 if file not found 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path of the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Loaded \mbox{\hyperlink{struct_job}{Job}} from file 
+\end{DoxyReturn}
+
+
+Definition at line 301 of file job.\+c.
 
 \mbox{\Hypertarget{job_8c_a13d701288b2e4109ba576a775d77d82f}\label{job_8c_a13d701288b2e4109ba576a775d77d82f}} 
 \index{job.c@{job.c}!SaveJob@{SaveJob}}
@@ -110,7 +213,7 @@ Saves job data into a csv file
 \end{DoxyReturn}
 
 
-Definition at line 178 of file job.\+c.
+Definition at line 179 of file job.\+c.
 
 \mbox{\Hypertarget{job_8c_a9e92f18d9e7676a1c17f788169c0dc66}\label{job_8c_a9e92f18d9e7676a1c17f788169c0dc66}} 
 \index{job.c@{job.c}!ShowJob@{ShowJob}}
@@ -129,7 +232,26 @@ Prints values of a \mbox{\hyperlink{struct_job}{Job}}
 \end{DoxyParams}
 
 
-Definition at line 211 of file job.\+c.
+Definition at line 212 of file job.\+c.
+
+\mbox{\Hypertarget{job_8c_a4c9c0c45d8a2bc4a21dfb5f87143712f}\label{job_8c_a4c9c0c45d8a2bc4a21dfb5f87143712f}} 
+\index{job.c@{job.c}!ShowJobFromList@{ShowJobFromList}}
+\index{ShowJobFromList@{ShowJobFromList}!job.c@{job.c}}
+\doxysubsubsection{\texorpdfstring{ShowJobFromList()}{ShowJobFromList()}}
+{\footnotesize\ttfamily void Show\+Job\+From\+List (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Print values from a \mbox{\hyperlink{struct_job}{Job}} from a generic list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 249 of file job.\+c.
 
 \mbox{\Hypertarget{job_8c_ab70c24c1db2ededb064a5e2fdf965711}\label{job_8c_ab70c24c1db2ededb064a5e2fdf965711}} 
 \index{job.c@{job.c}!ShowJobProcess@{ShowJobProcess}}
@@ -148,5 +270,5 @@ Prints values of a \mbox{\hyperlink{struct_job_process}{Job\+Process}}
 \end{DoxyParams}
 
 
-Definition at line 221 of file job.\+c.
+Definition at line 222 of file job.\+c.
 

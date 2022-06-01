@@ -67,7 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">weightedProcess.h File Reference</div>  </div>
 </div><!--header-->
@@ -79,12 +80,23 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_weighted_process.html">WeightedProcess</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> with weights  <a href="struct_weighted_process.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:abfafab138c0dace75b430c6403d58cfe"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_weighted_process.html">WeightedProcess</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="weighted_process_8h.html#abfafab138c0dace75b430c6403d58cfe">WeightedProcess</a></td></tr>
+<tr class="memdesc:abfafab138c0dace75b430c6403d58cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> with weights  <a href="weighted_process_8h.html#abfafab138c0dace75b430c6403d58cfe">More...</a><br /></td></tr>
 <tr class="separator:abfafab138c0dace75b430c6403d58cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a7daa4d0c124d5e39547747c293f4f4ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_weighted_process.html">WeightedProcess</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="weighted_process_8h.html#a7daa4d0c124d5e39547747c293f4f4ab">CreateWeightedProcess</a> (char *jobIdentifier, int operationId, <a class="el" href="struct_process.html">Process</a> *process, float processPercent, float jobFactor)</td></tr>
+<tr class="memdesc:a7daa4d0c124d5e39547747c293f4f4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_weighted_process.html" title="Defines a Process with weights">WeightedProcess</a> -&gt; A <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> with weights for measures  <a href="weighted_process_8h.html#a7daa4d0c124d5e39547747c293f4f4ab">More...</a><br /></td></tr>
+<tr class="separator:a7daa4d0c124d5e39547747c293f4f4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa411059a2f9395f29a1a9d9d9e290a71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="weighted_process_8h.html#aa411059a2f9395f29a1a9d9d9e290a71">CompareWeightedProcesses</a> (void *data, void *ptrId)</td></tr>
+<tr class="memdesc:aa411059a2f9395f29a1a9d9d9e290a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares a <a class="el" href="struct_weighted_process.html" title="Defines a Process with weights">WeightedProcess</a>'s id with a given id, provided from a generic list  <a href="weighted_process_8h.html#aa411059a2f9395f29a1a9d9d9e290a71">More...</a><br /></td></tr>
+<tr class="separator:aa411059a2f9395f29a1a9d9d9e290a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="abfafab138c0dace75b430c6403d58cfe"></a>
@@ -98,6 +110,110 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Defines a <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> with weights </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aa411059a2f9395f29a1a9d9d9e290a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa411059a2f9395f29a1a9d9d9e290a71">&#9670;&nbsp;</a></span>CompareWeightedProcesses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CompareWeightedProcesses </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptrId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compares a <a class="el" href="struct_weighted_process.html" title="Defines a Process with weights">WeightedProcess</a>'s id with a given id, provided from a generic list </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+    <tr><td class="paramname">ptrId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="weighted_process_8c_source.html#l00033">33</a> of file <a class="el" href="weighted_process_8c_source.html">weightedProcess.c</a>.</p>
+
+</div>
+</div>
+<a id="a7daa4d0c124d5e39547747c293f4f4ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7daa4d0c124d5e39547747c293f4f4ab">&#9670;&nbsp;</a></span>CreateWeightedProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_weighted_process.html">WeightedProcess</a> CreateWeightedProcess </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>jobIdentifier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>operationId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_process.html">Process</a> *&#160;</td>
+          <td class="paramname"><em>process</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>processPercent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>jobFactor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="struct_weighted_process.html" title="Defines a Process with weights">WeightedProcess</a> -&gt; A <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> with weights for measures </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jobIdentifier</td><td></td></tr>
+    <tr><td class="paramname">operationId</td><td></td></tr>
+    <tr><td class="paramname">process</td><td></td></tr>
+    <tr><td class="paramname">processPercent</td><td>Percentage value for <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> to calculate cedency </td></tr>
+    <tr><td class="paramname">jobFactor</td><td>Weight from job pondered </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="weighted_process_8c_source.html#l00012">12</a> of file <a class="el" href="weighted_process_8c_source.html">weightedProcess.c</a>.</p>
 
 </div>
 </div>

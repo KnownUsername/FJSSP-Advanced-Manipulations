@@ -147,6 +147,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4730b0325f02d143fd2e3921a233742b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8h.html#a4730b0325f02d143fd2e3921a233742b">SumAndCountTimesOnProcessList</a> (<a class="el" href="struct_process_list.html">ProcessList</a> *processList, int *counter)</td></tr>
 <tr class="memdesc:a4730b0325f02d143fd2e3921a233742b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sums times' values and counts the occurences Count of values is returned via pointer  <a href="process_8h.html#a4730b0325f02d143fd2e3921a233742b">More...</a><br /></td></tr>
 <tr class="separator:a4730b0325f02d143fd2e3921a233742b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5eb55c2d62e344d8a6411b090f52d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8h.html#a5d5eb55c2d62e344d8a6411b090f52d7">CountHigherThanAvgAndCountTimesOnProcesses</a> (<a class="el" href="struct_process_list.html">ProcessList</a> *processes, float averageTime, int *counter)</td></tr>
+<tr class="memdesc:a5d5eb55c2d62e344d8a6411b090f52d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts processes which takes longer than average time and counts Processes  <a href="process_8h.html#a5d5eb55c2d62e344d8a6411b090f52d7">More...</a><br /></td></tr>
+<tr class="separator:a5d5eb55c2d62e344d8a6411b090f52d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a3b5b0413545e0d4ff600b0a7203e3086"></a>
@@ -302,6 +305,53 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00249">249</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+
+</div>
+</div>
+<a id="a5d5eb55c2d62e344d8a6411b090f52d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d5eb55c2d62e344d8a6411b090f52d7">&#9670;&nbsp;</a></span>CountHigherThanAvgAndCountTimesOnProcesses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CountHigherThanAvgAndCountTimesOnProcesses </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_process_list.html">ProcessList</a> *&#160;</td>
+          <td class="paramname"><em>processes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>averageTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>counter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Counts processes which takes longer than average time and counts Processes </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">processes</td><td></td></tr>
+    <tr><td class="paramname">averageTime</td><td></td></tr>
+    <tr><td class="paramname">counter</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00495">495</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
 </div>
 </div>

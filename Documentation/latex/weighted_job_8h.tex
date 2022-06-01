@@ -1,0 +1,132 @@
+\hypertarget{weighted_job_8h}{}\doxysection{F\+J\+S\+S\+P-\/\+Advanced-\/\+Manipulations/weighted\+Job.h File Reference}
+\label{weighted_job_8h}\index{FJSSP-\/Advanced-\/Manipulations/weightedJob.h@{FJSSP-\/Advanced-\/Manipulations/weightedJob.h}}
+{\ttfamily \#include \char`\"{}list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}job.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}}
+\begin{DoxyCompactList}\small\item\em Defins a \mbox{\hyperlink{struct_job}{Job}} consituted by Processes with weights \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}} \mbox{\hyperlink{weighted_job_8h_acfbb4abf91d7ce1ab1e4f1930ba89193}{Weighted\+Job}}
+\begin{DoxyCompactList}\small\item\em Defins a \mbox{\hyperlink{struct_job}{Job}} consituted by Processes with weights \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}} \mbox{\hyperlink{weighted_job_8h_a4a09825dff96a4a040f53f3e9692174d}{Create\+Weighted\+Job}} (\mbox{\hyperlink{struct_job}{Job}} job, float process\+Percent)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}} -\/$>$ A \mbox{\hyperlink{struct_job}{Job}} containing Operations constituted by Processes with weights for measures \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{weighted_job_8h_a4eef76264080c2eb182b9602ea014d8e}{Compare\+Weighted\+Jobs}} (void $\ast$job\+Data, void $\ast$ptr\+Id)
+\begin{DoxyCompactList}\small\item\em Compares a \mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}}\textquotesingle{}s id with a given id, provided from a generic list \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_list}{List}} $\ast$ \mbox{\hyperlink{weighted_job_8h_a04784075191ac60f9ad448009da80e50}{Generate\+Weighted\+Jobs}} (\mbox{\hyperlink{struct_list}{List}} $\ast$jobs, float process\+Percent)
+\begin{DoxyCompactList}\small\item\em Create all Weighted\+Jobs from a list of jobs and group it on a list \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{weighted_job_8h_a2da3165c46b2db1aba28795c94cc420f}{Show\+Weighted\+Job}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Print values of a \mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}} from a generic list \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{weighted_job_8h_acfbb4abf91d7ce1ab1e4f1930ba89193}\label{weighted_job_8h_acfbb4abf91d7ce1ab1e4f1930ba89193}} 
+\index{weightedJob.h@{weightedJob.h}!WeightedJob@{WeightedJob}}
+\index{WeightedJob@{WeightedJob}!weightedJob.h@{weightedJob.h}}
+\doxysubsubsection{\texorpdfstring{WeightedJob}{WeightedJob}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}} \mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}}}
+
+
+
+Defins a \mbox{\hyperlink{struct_job}{Job}} consituted by Processes with weights 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{weighted_job_8h_a4eef76264080c2eb182b9602ea014d8e}\label{weighted_job_8h_a4eef76264080c2eb182b9602ea014d8e}} 
+\index{weightedJob.h@{weightedJob.h}!CompareWeightedJobs@{CompareWeightedJobs}}
+\index{CompareWeightedJobs@{CompareWeightedJobs}!weightedJob.h@{weightedJob.h}}
+\doxysubsubsection{\texorpdfstring{CompareWeightedJobs()}{CompareWeightedJobs()}}
+{\footnotesize\ttfamily int Compare\+Weighted\+Jobs (\begin{DoxyParamCaption}\item[{void $\ast$}]{job\+Data,  }\item[{void $\ast$}]{ptr\+Id }\end{DoxyParamCaption})}
+
+
+
+Compares a \mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}}\textquotesingle{}s id with a given id, provided from a generic list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job\+Data} & \\
+\hline
+{\em ptr\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 58 of file weighted\+Job.\+c.
+
+\mbox{\Hypertarget{weighted_job_8h_a4a09825dff96a4a040f53f3e9692174d}\label{weighted_job_8h_a4a09825dff96a4a040f53f3e9692174d}} 
+\index{weightedJob.h@{weightedJob.h}!CreateWeightedJob@{CreateWeightedJob}}
+\index{CreateWeightedJob@{CreateWeightedJob}!weightedJob.h@{weightedJob.h}}
+\doxysubsubsection{\texorpdfstring{CreateWeightedJob()}{CreateWeightedJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}} Create\+Weighted\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}}}]{job,  }\item[{float}]{process\+Percent }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}} -\/$>$ A \mbox{\hyperlink{struct_job}{Job}} containing Operations constituted by Processes with weights for measures 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & \\
+\hline
+{\em process\+Percent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 13 of file weighted\+Job.\+c.
+
+\mbox{\Hypertarget{weighted_job_8h_a04784075191ac60f9ad448009da80e50}\label{weighted_job_8h_a04784075191ac60f9ad448009da80e50}} 
+\index{weightedJob.h@{weightedJob.h}!GenerateWeightedJobs@{GenerateWeightedJobs}}
+\index{GenerateWeightedJobs@{GenerateWeightedJobs}!weightedJob.h@{weightedJob.h}}
+\doxysubsubsection{\texorpdfstring{GenerateWeightedJobs()}{GenerateWeightedJobs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_list}{List}}$\ast$ Generate\+Weighted\+Jobs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} $\ast$}]{jobs,  }\item[{float}]{process\+Percent }\end{DoxyParamCaption})}
+
+
+
+Create all Weighted\+Jobs from a list of jobs and group it on a list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jobs} & \\
+\hline
+{\em process\+Percent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 76 of file weighted\+Job.\+c.
+
+\mbox{\Hypertarget{weighted_job_8h_a2da3165c46b2db1aba28795c94cc420f}\label{weighted_job_8h_a2da3165c46b2db1aba28795c94cc420f}} 
+\index{weightedJob.h@{weightedJob.h}!ShowWeightedJob@{ShowWeightedJob}}
+\index{ShowWeightedJob@{ShowWeightedJob}!weightedJob.h@{weightedJob.h}}
+\doxysubsubsection{\texorpdfstring{ShowWeightedJob()}{ShowWeightedJob()}}
+{\footnotesize\ttfamily void Show\+Weighted\+Job (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Print values of a \mbox{\hyperlink{struct_weighted_job}{Weighted\+Job}} from a generic list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file weighted\+Job.\+c.
+

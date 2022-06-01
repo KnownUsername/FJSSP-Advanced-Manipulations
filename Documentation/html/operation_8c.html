@@ -73,13 +73,14 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="operation_8h_source.html">operation.h</a>&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div>
 <p><a href="operation_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af9b24abfebf95e9a84cd80cbcf1e876f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_operation.html">Operation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operation_8c.html#af9b24abfebf95e9a84cd80cbcf1e876f">CreateOperation</a> (int opIdentifier, <a class="el" href="struct_process_list.html">ProcessList</a> *processList)</td></tr>
-<tr class="memdesc:af9b24abfebf95e9a84cd80cbcf1e876f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_operation.html" title="Defines 1 Operation">Operation</a> with given values  <a href="operation_8c.html#af9b24abfebf95e9a84cd80cbcf1e876f">More...</a><br /></td></tr>
+<tr class="memdesc:af9b24abfebf95e9a84cd80cbcf1e876f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an <a class="el" href="struct_operation.html" title="Defines 1 Operation">Operation</a> with given values  <a href="operation_8c.html#af9b24abfebf95e9a84cd80cbcf1e876f">More...</a><br /></td></tr>
 <tr class="separator:af9b24abfebf95e9a84cd80cbcf1e876f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0442e317d8737a13cf3d55bad79f5e29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_operation_list.html">OperationList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operation_8c.html#a0442e317d8737a13cf3d55bad79f5e29">CreateOperationListElement</a> (<a class="el" href="struct_operation.html">Operation</a> <a class="el" href="struct_operation.html">Operation</a>)</td></tr>
 <tr class="memdesc:a0442e317d8737a13cf3d55bad79f5e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_operation_list.html" title="Defines a list of Operations">OperationList</a> 'element' with an <a class="el" href="struct_operation.html" title="Defines 1 Operation">Operation</a>  <a href="operation_8c.html#a0442e317d8737a13cf3d55bad79f5e29">More...</a><br /></td></tr>
@@ -108,6 +109,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ac5bef494ac8ba40c76e35a9a744495f9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operation_8c.html#ac5bef494ac8ba40c76e35a9a744495f9">CalculateAverageOperationProcessTime</a> (<a class="el" href="struct_operation_list.html">OperationList</a> *operationList)</td></tr>
 <tr class="memdesc:ac5bef494ac8ba40c76e35a9a744495f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates average time of Operations, to complete a <a class="el" href="struct_process.html" title="Defines 1 process">Process</a>  <a href="operation_8c.html#ac5bef494ac8ba40c76e35a9a744495f9">More...</a><br /></td></tr>
 <tr class="separator:ac5bef494ac8ba40c76e35a9a744495f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae22e88aec904422b88565029ce50781c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operation_8c.html#ae22e88aec904422b88565029ce50781c">ProbWorstThanAverage</a> (<a class="el" href="struct_operation_list.html">OperationList</a> *operations, float averageTime)</td></tr>
+<tr class="memdesc:ae22e88aec904422b88565029ce50781c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates probability of a <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> to take longer than average time of a list of Operations  <a href="operation_8c.html#ae22e88aec904422b88565029ce50781c">More...</a><br /></td></tr>
+<tr class="separator:ae22e88aec904422b88565029ce50781c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a0bd5d11e98ee8be198d6297a77fe5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operation_8c.html#a26a0bd5d11e98ee8be198d6297a77fe5">GetMaximumDurationOnOperationList</a> (<a class="el" href="struct_operation_list.html">OperationList</a> *operations)</td></tr>
+<tr class="memdesc:a26a0bd5d11e98ee8be198d6297a77fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves worst time to execute a <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> / <a class="el" href="struct_operation.html" title="Defines 1 Operation">Operation</a>, from a list of Operations  <a href="operation_8c.html#a26a0bd5d11e98ee8be198d6297a77fe5">More...</a><br /></td></tr>
+<tr class="separator:a26a0bd5d11e98ee8be198d6297a77fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948b6d60e35b54293e909c5af67a6fab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_operation_list.html">OperationList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operation_8c.html#a948b6d60e35b54293e909c5af67a6fab">DeleteOperationList</a> (<a class="el" href="struct_operation_list.html">OperationList</a> *operations)</td></tr>
+<tr class="memdesc:a948b6d60e35b54293e909c5af67a6fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all Operations from a list  <a href="operation_8c.html#a948b6d60e35b54293e909c5af67a6fab">More...</a><br /></td></tr>
+<tr class="separator:a948b6d60e35b54293e909c5af67a6fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ac5bef494ac8ba40c76e35a9a744495f9"></a>
@@ -135,7 +145,7 @@ Functions</h2></td></tr>
 </dl>
 <p>&lt;return&gt; -1 if NULL list or average of list &lt;/return&gt; </p>
 
-<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00237">237</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00238">238</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
 
 </div>
 </div>
@@ -182,7 +192,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00216">216</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00217">217</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
 
 </div>
 </div>
@@ -212,7 +222,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <a class="el" href="struct_operation.html" title="Defines 1 Operation">Operation</a> with given values </p>
+<p>Creates an <a class="el" href="struct_operation.html" title="Defines 1 Operation">Operation</a> with given values </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">opIdentifier</td><td></td></tr>
@@ -222,7 +232,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00023">23</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00024">24</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
 
 </div>
 </div>
@@ -251,7 +261,65 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00038">38</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00039">39</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+
+</div>
+</div>
+<a id="a948b6d60e35b54293e909c5af67a6fab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948b6d60e35b54293e909c5af67a6fab">&#9670;&nbsp;</a></span>DeleteOperationList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_operation_list.html">OperationList</a>* DeleteOperationList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_operation_list.html">OperationList</a> *&#160;</td>
+          <td class="paramname"><em>operations</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes all Operations from a list </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operations</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00337">337</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+
+</div>
+</div>
+<a id="a26a0bd5d11e98ee8be198d6297a77fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a0bd5d11e98ee8be198d6297a77fe5">&#9670;&nbsp;</a></span>GetMaximumDurationOnOperationList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetMaximumDurationOnOperationList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_operation_list.html">OperationList</a> *&#160;</td>
+          <td class="paramname"><em>operations</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves worst time to execute a <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> / <a class="el" href="struct_operation.html" title="Defines 1 Operation">Operation</a>, from a list of Operations </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operations</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00306">306</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
 
 </div>
 </div>
@@ -292,7 +360,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00093">93</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00094">94</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
 
 </div>
 </div>
@@ -332,7 +400,47 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>1 -&gt; True | 0 -&gt; False </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00076">76</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00077">77</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+
+</div>
+</div>
+<a id="ae22e88aec904422b88565029ce50781c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae22e88aec904422b88565029ce50781c">&#9670;&nbsp;</a></span>ProbWorstThanAverage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ProbWorstThanAverage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_operation_list.html">OperationList</a> *&#160;</td>
+          <td class="paramname"><em>operations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>averageTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates probability of a <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> to take longer than average time of a list of Operations </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operations</td><td></td></tr>
+    <tr><td class="paramname">averageTime</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00273">273</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
 
 </div>
 </div>
@@ -372,7 +480,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00161">161</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00162">162</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
 
 </div>
 </div>
@@ -412,7 +520,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_operation.html" title="Defines 1 Operation">Operation</a> pointer if found or NULL if not found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00054">54</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00055">55</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
 
 </div>
 </div>
@@ -434,7 +542,7 @@ Functions</h2></td></tr>
 
 <p>Prints values of an <a class="el" href="struct_operation.html" title="Defines 1 Operation">Operation</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00138">138</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00139">139</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
 
 </div>
 </div>
@@ -462,7 +570,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00147">147</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="operation_8c_source.html#l00148">148</a> of file <a class="el" href="operation_8c_source.html">operation.c</a>.</p>
 
 </div>
 </div>

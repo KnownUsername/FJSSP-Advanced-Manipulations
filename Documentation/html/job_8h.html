@@ -74,6 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="operation_8h_source.html">operation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="list_8h_source.html">list.h</a>&quot;</code><br />
 </div>
 <p><a href="job_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -103,6 +104,9 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a7b9e3d6d9d7ad80e14017ba5921ee5e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_job.html">Job</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="job_8h.html#a7b9e3d6d9d7ad80e14017ba5921ee5e1">CreateJob</a> (char *jobIdentifier, <a class="el" href="struct_operation_list.html">OperationList</a> *operations)</td></tr>
+<tr class="memdesc:a7b9e3d6d9d7ad80e14017ba5921ee5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a job with given values  <a href="job_8h.html#a7b9e3d6d9d7ad80e14017ba5921ee5e1">More...</a><br /></td></tr>
+<tr class="separator:a7b9e3d6d9d7ad80e14017ba5921ee5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd421e028e22d0e53c3445b8a01b39d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_job.html">Job</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="job_8h.html#afd421e028e22d0e53c3445b8a01b39d6">LoadJob</a> (char filename[], int *status)</td></tr>
 <tr class="memdesc:afd421e028e22d0e53c3445b8a01b39d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts values of 1 <a class="el" href="struct_job.html" title="Defines 1 job">Job</a> from a file status takes value 1 if it loaded with success or 0 if file not found  <a href="job_8h.html#afd421e028e22d0e53c3445b8a01b39d6">More...</a><br /></td></tr>
 <tr class="separator:afd421e028e22d0e53c3445b8a01b39d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,6 +125,17 @@ Functions</h2></td></tr>
 <tr class="memitem:ab70c24c1db2ededb064a5e2fdf965711"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="job_8h.html#ab70c24c1db2ededb064a5e2fdf965711">ShowJobProcess</a> (<a class="el" href="struct_job_process.html">JobProcess</a> jobProcess)</td></tr>
 <tr class="memdesc:ab70c24c1db2ededb064a5e2fdf965711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints values of a <a class="el" href="struct_job_process.html" title="Defines a Job with a Process established for each Operation, instead of having all possibilities.">JobProcess</a>  <a href="job_8h.html#ab70c24c1db2ededb064a5e2fdf965711">More...</a><br /></td></tr>
 <tr class="separator:ab70c24c1db2ededb064a5e2fdf965711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c9c0c45d8a2bc4a21dfb5f87143712f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="job_8h.html#a4c9c0c45d8a2bc4a21dfb5f87143712f">ShowJobFromList</a> (void *data)</td></tr>
+<tr class="memdesc:a4c9c0c45d8a2bc4a21dfb5f87143712f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print values from a <a class="el" href="struct_job.html" title="Defines 1 job">Job</a> from a generic list  <a href="job_8h.html#a4c9c0c45d8a2bc4a21dfb5f87143712f">More...</a><br /></td></tr>
+<tr class="separator:a4c9c0c45d8a2bc4a21dfb5f87143712f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61de6b7bb1758fdce259e54c56e6a0f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="job_8h.html#a61de6b7bb1758fdce259e54c56e6a0f5">CompareJobs</a> (void *jobData, int *ptrId)</td></tr>
+<tr class="separator:a61de6b7bb1758fdce259e54c56e6a0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788a6a17d24a67d408d09606abe08ef0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="job_8h.html#a788a6a17d24a67d408d09606abe08ef0">DeleteJobDataFromList</a> (void *data)</td></tr>
+<tr class="memdesc:a788a6a17d24a67d408d09606abe08ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free memory from a <a class="el" href="struct_job.html" title="Defines 1 job">Job</a> structure from a generic list  <a href="job_8h.html#a788a6a17d24a67d408d09606abe08ef0">More...</a><br /></td></tr>
+<tr class="separator:a788a6a17d24a67d408d09606abe08ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08e455de9e11e971086051de72cfe294"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_list.html">List</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="job_8h.html#a08e455de9e11e971086051de72cfe294">LoadJobs</a> (char filename[], int *status)</td></tr>
+<tr class="memdesc:a08e455de9e11e971086051de72cfe294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts values of multiple Jobs from a file status takes value 1 if it loaded with success or 0 if file not found  <a href="job_8h.html#a08e455de9e11e971086051de72cfe294">More...</a><br /></td></tr>
+<tr class="separator:a08e455de9e11e971086051de72cfe294"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a7f678ed7503a7b4211821d14323751d8"></a>
@@ -173,6 +188,103 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a61de6b7bb1758fdce259e54c56e6a0f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61de6b7bb1758fdce259e54c56e6a0f5">&#9670;&nbsp;</a></span>CompareJobs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CompareJobs </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>jobData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>ptrId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b9e3d6d9d7ad80e14017ba5921ee5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b9e3d6d9d7ad80e14017ba5921ee5e1">&#9670;&nbsp;</a></span>CreateJob()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_job.html">Job</a> CreateJob </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>jobIdentifier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_operation_list.html">OperationList</a> *&#160;</td>
+          <td class="paramname"><em>operations</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a job with given values </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jobIdentifier</td><td></td></tr>
+    <tr><td class="paramname">operations</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00283">283</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
+
+</div>
+</div>
+<a id="a788a6a17d24a67d408d09606abe08ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a788a6a17d24a67d408d09606abe08ef0">&#9670;&nbsp;</a></span>DeleteJobDataFromList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* DeleteJobDataFromList </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free memory from a <a class="el" href="struct_job.html" title="Defines 1 job">Job</a> structure from a generic list </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00265">265</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
+
+</div>
+</div>
 <a id="a24762f3a4eb2b63f2c0eb3253a37225c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24762f3a4eb2b63f2c0eb3253a37225c">&#9670;&nbsp;</a></span>GetMaximumJobProcessLine()</h2>
 
@@ -198,7 +310,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00134">134</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00135">135</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
 
 </div>
 </div>
@@ -227,7 +339,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00094">94</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00095">95</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
 
 </div>
 </div>
@@ -266,7 +378,46 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Loaded <a class="el" href="struct_job.html" title="Defines 1 job">Job</a> from file </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00027">27</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00028">28</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
+
+</div>
+</div>
+<a id="a08e455de9e11e971086051de72cfe294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08e455de9e11e971086051de72cfe294">&#9670;&nbsp;</a></span>LoadJobs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_list.html">List</a>* LoadJobs </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>filename</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inserts values of multiple Jobs from a file status takes value 1 if it loaded with success or 0 if file not found </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Path of the file</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Loaded <a class="el" href="struct_job.html" title="Defines 1 job">Job</a> from file </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00301">301</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
 
 </div>
 </div>
@@ -306,7 +457,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00178">178</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00179">179</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
 
 </div>
 </div>
@@ -334,7 +485,35 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00211">211</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00212">212</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
+
+</div>
+</div>
+<a id="a4c9c0c45d8a2bc4a21dfb5f87143712f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9c0c45d8a2bc4a21dfb5f87143712f">&#9670;&nbsp;</a></span>ShowJobFromList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowJobFromList </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print values from a <a class="el" href="struct_job.html" title="Defines 1 job">Job</a> from a generic list </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00249">249</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
 
 </div>
 </div>
@@ -362,7 +541,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00221">221</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="job_8c_source.html#l00222">222</a> of file <a class="el" href="job_8c_source.html">job.c</a>.</p>
 
 </div>
 </div>

@@ -1,0 +1,88 @@
+\hypertarget{weighted_operation_8c}{}\doxysection{F\+J\+S\+S\+P-\/\+Advanced-\/\+Manipulations/weighted\+Operation.c File Reference}
+\label{weighted_operation_8c}\index{FJSSP-\/Advanced-\/Manipulations/weightedOperation.c@{FJSSP-\/Advanced-\/Manipulations/weightedOperation.c}}
+{\ttfamily \#include \char`\"{}weighted\+Operation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}operation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}weighted\+Process.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{weighted_operation_8c_a1fc8aab312a4cc788bef780b1ccdea01}{Compare\+Weighted\+Operations}} (void $\ast$operation\+Data, void $\ast$ptr\+Id)
+\begin{DoxyCompactList}\small\item\em Compares a \mbox{\hyperlink{struct_weighted_operation}{Weighted\+Operation}}\textquotesingle{}s id with a given id, provided from a generic list \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_weighted_operation}{Weighted\+Operation}} \mbox{\hyperlink{weighted_operation_8c_a74aa71553cba547024c531de5d86174a}{Create\+Weighted\+Operation}} (\mbox{\hyperlink{struct_operation}{Operation}} operation, char $\ast$job\+Identifier, float process\+Percent, float job\+Factor)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{struct_weighted_operation}{Weighted\+Operation}} -\/$>$ An \mbox{\hyperlink{struct_operation}{Operation}} containing Processes with weights for measures \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{weighted_operation_8c_ac2432a5482ecbaaa4f446a6300753721}{Show\+Weighted\+Operation}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Print values of a \mbox{\hyperlink{struct_weighted_operation}{Weighted\+Operation}} from a generic list \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{weighted_operation_8c_a1fc8aab312a4cc788bef780b1ccdea01}\label{weighted_operation_8c_a1fc8aab312a4cc788bef780b1ccdea01}} 
+\index{weightedOperation.c@{weightedOperation.c}!CompareWeightedOperations@{CompareWeightedOperations}}
+\index{CompareWeightedOperations@{CompareWeightedOperations}!weightedOperation.c@{weightedOperation.c}}
+\doxysubsubsection{\texorpdfstring{CompareWeightedOperations()}{CompareWeightedOperations()}}
+{\footnotesize\ttfamily int Compare\+Weighted\+Operations (\begin{DoxyParamCaption}\item[{void $\ast$}]{operation\+Data,  }\item[{void $\ast$}]{ptr\+Id }\end{DoxyParamCaption})}
+
+
+
+Compares a \mbox{\hyperlink{struct_weighted_operation}{Weighted\+Operation}}\textquotesingle{}s id with a given id, provided from a generic list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation\+Data} & \\
+\hline
+{\em ptr\+Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 12 of file weighted\+Operation.\+c.
+
+\mbox{\Hypertarget{weighted_operation_8c_a74aa71553cba547024c531de5d86174a}\label{weighted_operation_8c_a74aa71553cba547024c531de5d86174a}} 
+\index{weightedOperation.c@{weightedOperation.c}!CreateWeightedOperation@{CreateWeightedOperation}}
+\index{CreateWeightedOperation@{CreateWeightedOperation}!weightedOperation.c@{weightedOperation.c}}
+\doxysubsubsection{\texorpdfstring{CreateWeightedOperation()}{CreateWeightedOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_weighted_operation}{Weighted\+Operation}} Create\+Weighted\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation}{Operation}}}]{operation,  }\item[{char $\ast$}]{job\+Identifier,  }\item[{float}]{process\+Percent,  }\item[{float}]{job\+Factor }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{struct_weighted_operation}{Weighted\+Operation}} -\/$>$ An \mbox{\hyperlink{struct_operation}{Operation}} containing Processes with weights for measures 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation} & \\
+\hline
+{\em job\+Identifier} & \\
+\hline
+{\em process\+Percent} & Percentage of how much consideration, the process must be over its job weight. It\textquotesingle{}s value is already normalized from 0 to 1.\\
+\hline
+{\em job\+Factor} & Weight from job \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 32 of file weighted\+Operation.\+c.
+
+\mbox{\Hypertarget{weighted_operation_8c_ac2432a5482ecbaaa4f446a6300753721}\label{weighted_operation_8c_ac2432a5482ecbaaa4f446a6300753721}} 
+\index{weightedOperation.c@{weightedOperation.c}!ShowWeightedOperation@{ShowWeightedOperation}}
+\index{ShowWeightedOperation@{ShowWeightedOperation}!weightedOperation.c@{weightedOperation.c}}
+\doxysubsubsection{\texorpdfstring{ShowWeightedOperation()}{ShowWeightedOperation()}}
+{\footnotesize\ttfamily void Show\+Weighted\+Operation (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Print values of a \mbox{\hyperlink{struct_weighted_operation}{Weighted\+Operation}} from a generic list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file weighted\+Operation.\+c.
+

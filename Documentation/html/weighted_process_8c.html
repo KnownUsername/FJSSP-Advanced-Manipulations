@@ -78,10 +78,56 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7daa4d0c124d5e39547747c293f4f4ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_weighted_process.html">WeightedProcess</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="weighted_process_8c.html#a7daa4d0c124d5e39547747c293f4f4ab">CreateWeightedProcess</a> (char *jobIdentifier, int operationId, <a class="el" href="struct_process.html">Process</a> *process, float processPercent, float jobFactor)</td></tr>
-<tr class="memdesc:a7daa4d0c124d5e39547747c293f4f4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_weighted_process.html">WeightedProcess</a> -&gt; A <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> with weights for measures  <a href="weighted_process_8c.html#a7daa4d0c124d5e39547747c293f4f4ab">More...</a><br /></td></tr>
+<tr class="memdesc:a7daa4d0c124d5e39547747c293f4f4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_weighted_process.html" title="Defines a Process with weights">WeightedProcess</a> -&gt; A <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> with weights for measures  <a href="weighted_process_8c.html#a7daa4d0c124d5e39547747c293f4f4ab">More...</a><br /></td></tr>
 <tr class="separator:a7daa4d0c124d5e39547747c293f4f4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa411059a2f9395f29a1a9d9d9e290a71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="weighted_process_8c.html#aa411059a2f9395f29a1a9d9d9e290a71">CompareWeightedProcesses</a> (void *data, void *ptrId)</td></tr>
+<tr class="memdesc:aa411059a2f9395f29a1a9d9d9e290a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares a <a class="el" href="struct_weighted_process.html" title="Defines a Process with weights">WeightedProcess</a>'s id with a given id, provided from a generic list  <a href="weighted_process_8c.html#aa411059a2f9395f29a1a9d9d9e290a71">More...</a><br /></td></tr>
+<tr class="separator:aa411059a2f9395f29a1a9d9d9e290a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affce0e96ca4664c642850e7d09ee6978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="weighted_process_8c.html#affce0e96ca4664c642850e7d09ee6978">ShowWeightedProcess</a> (void *data)</td></tr>
+<tr class="memdesc:affce0e96ca4664c642850e7d09ee6978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print values of a <a class="el" href="struct_weighted_process.html" title="Defines a Process with weights">WeightedProcess</a> from a generic list  <a href="weighted_process_8c.html#affce0e96ca4664c642850e7d09ee6978">More...</a><br /></td></tr>
+<tr class="separator:affce0e96ca4664c642850e7d09ee6978"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aa411059a2f9395f29a1a9d9d9e290a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa411059a2f9395f29a1a9d9d9e290a71">&#9670;&nbsp;</a></span>CompareWeightedProcesses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CompareWeightedProcesses </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptrId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compares a <a class="el" href="struct_weighted_process.html" title="Defines a Process with weights">WeightedProcess</a>'s id with a given id, provided from a generic list </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+    <tr><td class="paramname">ptrId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="weighted_process_8c_source.html#l00033">33</a> of file <a class="el" href="weighted_process_8c_source.html">weightedProcess.c</a>.</p>
+
+</div>
+</div>
 <a id="a7daa4d0c124d5e39547747c293f4f4ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7daa4d0c124d5e39547747c293f4f4ab">&#9670;&nbsp;</a></span>CreateWeightedProcess()</h2>
 
@@ -126,7 +172,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a <a class="el" href="struct_weighted_process.html">WeightedProcess</a> -&gt; A <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> with weights for measures </p>
+<p>Creates a <a class="el" href="struct_weighted_process.html" title="Defines a Process with weights">WeightedProcess</a> -&gt; A <a class="el" href="struct_process.html" title="Defines 1 process">Process</a> with weights for measures </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">jobIdentifier</td><td></td></tr>
@@ -140,6 +186,34 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="weighted_process_8c_source.html#l00012">12</a> of file <a class="el" href="weighted_process_8c_source.html">weightedProcess.c</a>.</p>
+
+</div>
+</div>
+<a id="affce0e96ca4664c642850e7d09ee6978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affce0e96ca4664c642850e7d09ee6978">&#9670;&nbsp;</a></span>ShowWeightedProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowWeightedProcess </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print values of a <a class="el" href="struct_weighted_process.html" title="Defines a Process with weights">WeightedProcess</a> from a generic list </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="weighted_process_8c_source.html#l00048">48</a> of file <a class="el" href="weighted_process_8c_source.html">weightedProcess.c</a>.</p>
 
 </div>
 </div>
