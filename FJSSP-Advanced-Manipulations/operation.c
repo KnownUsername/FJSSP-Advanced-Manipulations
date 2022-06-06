@@ -341,6 +341,11 @@ OperationList* DeleteOperationList(OperationList* operations) {
 		// Recursively reach last element
 		operations->nextOperation = DeleteOperationList(operations->nextOperation);
 
+		// Free allocated memory from list of Processes
+		DeleteProcessList(operations->operation.alternProcesses);
+
+		operations->operation.alternProcesses = NULL;
+
 		// Free allocated memory 
 		free(operations);
 
